@@ -1,0 +1,112 @@
+
+------------------ INTODUCTION---------------------
+HTML :- Hyper Text Markup Language.
+It is used to create and design web pages
+HTML documents are comprised of a series of elements,which are enclosed within angle brackets,known as tags
+These tags define the structure and content of the documents
+Head and body tags are children of html tag.
+HTML ELEMENT=Start tag+content+End tag.
+FEATURES:-
+It is very easy and simple language.
+Html is a case insensitive.
+</--HTML Content--/>
+
+--------- EXAMPLES OF HTML TAGS----------
+ We can add element inside the body tag to define the page layout.
+    ##  HTML ELEMENT  ##
+Everything from starting to ending tag.
+EX:-
+<body> content </body>
+
+    ##  Heading Tag  ##
+This tag is used to make heading from most important to least important.
+EX:-
+<h1>,<h2>,<h3,....<h6>
+  ##   Bold,Italic or underline tags   ##
+EX:-
+<b> THis is Bold </b>
+<i> This is Italic </i>
+<u> This is underline <?u>
+      ##    Pre Tag   ##
+It is used to create spaces between the text in Html.
+EX:-
+<pre> This is written using pretag </pre>
+      ##   Big and small   Tag ##
+We can make the text a bit larger and a bit smaller using big and small tags respectively.
+
+------------ TAGS AND ELEMENTS FORK HTML ------------
+        ##  Html Tags ##
+ -> HTML tags are special keywords that specify how the data will be displayed or how to format the data by the web browsers.        
+ -> The start of the tags are given by angular brackets <> and the end by angular brackets and / that is </>.
+ EX:-
+  <head></head>
+        ##  HTML Elements  ##
+The collection of start and end tag with the content inserted in between them is known as element tag.
+EX:-
+<head> I am HTML element </head>
+--------------- TYPES OF TAGS ----------------
+-> HTML Uses predefined tags that tells the browser how to display the content.
+-> Tags are nothing but some instructions that are enclosed in angular braces(i.e <>).
+-> There are two types of tags in HTML:
+    * Empty
+    * Container
+      ##  Container Tags  ##
+ -> Container tags are generally divided into three parts.
+ -> They are:
+             1.Opening tag
+             2.Content tag
+             3.closing tag
+-> THese opening and closing tags are used in pairs which are start tag and end tag,which is often called ON and OFF tags.
+-> The majority of tags present in HTML are  container tags.
+Syntax:
+       <tag_name>...
+       </tag_name>
+EX:-
+    Heading Tags(<h1>..</h1>),List Tags(<u>..</u>),Button Tags(<Button>..</button>),etc
+     ##  Empty Tags  ##
+-> The tags that do not contain any closing tags are known as empty tags.
+-> Empty tags contain only the opening tag but they perform  some action in the webpage.
+Syntax:
+       <tag..name>
+EX:-
+    <img>, <br>, <hr>, etc
+------------ HTML ATTRIBUTES ----------------
+-> HTML attributes are the special words placed inside the opening tags.
+-> It is used to define the charcteristics of an HTML element.
+-> HTML attributes contain two parts,attribute name, and its value.
+-> The attribute pairs(attribute_name,attribute_value) are separated using equal(=) operator.
+-> The attribute value is closed inside double quotes("").
+Syntax:
+       <tag_name attribute_name="value"
+Ex:
+    <img src="./img.png"
+    height="300px"
+    width="300px">
+------------- HTML GLOBAL ATTRIBUTES -------------
+-> HTML global attributes refer to the attribute commmon to all HTML elements.
+-> Global attributes specified on both standard and non-standard elements.
+EX:-
+   hidden: It is used to define the visibility of elements,it contains a boolean value           
+--------------- META TAGS FORK HTML ---------------
+-> The metadata means information about data.
+-> The <meta> tag in HTML provides important information about a document.
+     ##  Meta Tags in Websites  ##
+*These tags are used to add name/value pairs to describe propertiesof HTML documents.
+*This tag is an empty element because it has only an opening tag and no closing tag,but it carries information within its attributes.
+*A web document can include one or more meta tags depending on  information
+Syntax:
+      <meta attribute-name="value">
+    ##  Attributes  ##
+This tag accepts four attributes which are mentioned and described below
+*name:
+      This attribute is used to dEfine the name of the property.
+*http-equiv:
+      This attribute is used to get the HTTP response message header.
+*content:
+      This attribute is used to specify properties value.
+*charset:
+      This attribute is used to specify a character encoding for an HTML file.
+NOTE:- The meta tags also accepts Global Attributes in HTML file
+
+
+            
