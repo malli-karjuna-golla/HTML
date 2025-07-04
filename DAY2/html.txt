@@ -1,0 +1,79 @@
+some commonly used container tags:-
+        ## ESSENTIAL TAGS ##
+They are used to create the structure of the webpage
+ *<html>...</html>:
+ -> This marks the begining and ending of the webpage.
+ -> This contains all other tags in between these tags which are considered for making a webpage.
+  *<head...</head>:
+ -> This tag is used to define the head part of the document,which contains the information related to the webpage.
+  *<title...</title>:
+-> This tag stores the description of the webpage,whatever given in these tags appears on the tab namewhile opened by the web browser.
+-> It is described in the headtag.
+ *<body...</body>
+-> This tag is used to display all the information or data,i.e,text,images,hyperlinks videos,etc..
+        ## HEADINGS ##
+<h1>...</h1> to <h6>..</h6>:
+   *It is used for including headings of the different sizes ranging from 1 to 6.
+        ## TEXT FORMATTERS ##
+Following tags are used for text formatting:
+  *<p>..</P>:
+when paragraphs are needed to be included,this tag is used
+  *<b>..</b>:
+Makes the contained text to bold.
+  *<i>..</i>:
+makes the contained text to Italic.
+        ## Hyper links  ##
+<a href="link.com">...</a>:
+ ->when we link some other webpages we add the hyperlinks to other webpages using this <a...>..</a>tag.
+        ## Button tag  ##
+ -> It is used to create a click button.
+ -> <button>...</button> is used in many ways but mainly used to manipulate dom by adding events and many more.
+        ## Division tag ##
+ -> It is used to create a division.
+ -> <division>...</division> defines a selection in a document.
+ -> The webpage can be divided to different sections using the <div>..</div>tag.
+        ## Iframe tag  ##
+ -> It is used to inline framing.
+ -> <iframe src="link.com></iframe>:when some other document is to be embedded like some video or image into HTML.
+        ##  Navigation tag ##
+ -> It is used to set a navigation link.
+ -> <nav>..</nav>:Defines a navigation bar that contains a set of menu or a menu of hyperlinks.
+        ## Script tag  ##
+ -> It is used to add Javascript code to the webpage.
+ -> <script>..</script>:This contains the javascript code that adds interactivity to the webpage.
+         ##  Lists  ##
+ ->Following tags are used to write data in the form of ordered and unordered lists.
+   *<ol>..</ol>:It is used to craete ordered lists
+   *<ul>..</ul>:It is used to create unordered lists
+   *<li>--</li>:it is used to add list items
+Some commonly used empty tags are:
+1.<br>:Inserts a line break in a webpage.
+2.<hr>:Inserts a horizontal line in a webpage.
+3.<img>:This is used to display images on the webpage.
+4.<input>:This is mainly used with forms and also defines the type of the input.
+5.<link>: It is mainly used to link CSS files.
+6.<meta>:Contains all metadata of the webpage.Metadata is the data about data and is described in the head tag.
+7.<source>:It is used to insert any media source like audio,video etc.. in our wbpage.
+
+using <ins>tag
+Supported Browsers:
+  *Google chrome
+  *Microsoft Edge
+  *Firefox
+  *opera
+  *Safari
+
+  -----------LINK TAG-----------
+  What is a link?
+ *It is a connection from one web resouce to another.
+ *A link has two ends,An anchor and direction.
+ *The link starts at the "source' anchor and points to the "destination" anchor.
+   ##  HTML Link syntax  ##
+ < a href="url"> Text link </a>
+ -> href:It is used to specify the destination address of the link.
+ ->href stands for "Hyper text reference".
+
+        ## internal links ##
+ -> An internal link is a type of hyperlink whose target or destination is a resouce,such as an image or document.
+ ->GeeksforGeeks contribute:A link to contribute page on GeeksforGeeks website.
+ ->GeeksforGeeks : A link page on world wide web.           
