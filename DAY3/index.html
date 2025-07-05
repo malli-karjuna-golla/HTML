@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <style>
+       a:link {
+          color: red;
+          background-color: transparent;
+        }
+        
+       a:visited {
+          color: green;
+          background-color: transparent;  
+        }
+
+       a:hover {
+          color: blue;
+          background-color: transparent;
+       }
+
+       a:active {
+          color: yellow;
+          background-color: transparent;
+       }
+    </style>
+   </head> 
+   <body>
+      <p>changing the default colors of links
+      </p>
+
+      <p>Visited link</p>
+
+      <a 
+       href="https://www.geeksforgeeks.org">GeeksforGeeks</a>
+
+       <p>Link</p>
+
+      <a 
+       href="https://facebook.com">facebook</a>
+
+       <p>hovering effect</p>
+
+       <a 
+       href="https://www.geeksforgeeks.org">GeeksforGeeks</a>
+   </body>
+</html>
+
+<!--Example2-->
+<html>
+ <body>
+    <h3>Various options avilable in the Target Attribute</h3>
+    <p>
+     If you set the target atttribute to "_blank",the link will open in a new browser window or tab.
+    </p>
+
+    <a 
+    href="https://www.geeksforgeeks.org"target="_blank">GeeksforGeeks</a>
+
+    <p>
+     If you set the target atttribute to "_self",the link will open in a new browser window or tab.    
+    </p>
+
+    <a 
+    href="https://www.geeksforgeeks.org"target="_self">GeeksforGeeks</a>
+
+    <p>
+     If you set the target atttribute to "_top",the link will open in a new browser window or tab.   
+    </p>
+
+    <a 
+    href="https://www.geeksforgeeks.org"target="_top">GeeksforGeeks</a>
+
+    <p>
+     If you set the target atttribute to "_parent",the link will open in a new browser window or tab.   
+    </p>
+
+    <a 
+    href="https://www.geeksforgeeks.org"target="_parent">GeeksforGeeks</a>
+</body>   
+</html>
+
+<!--Example3-->
+<html>
+  <h3>Example of Adding a link </h3>
+  <body>
+    <p>click on the following link</p>
+    <a href=
+    "https://www.geeksforgeeks.org">GeeksforGeeks</a>
+  </body>  
+</html>
+
+<!--Example4-->
+<html>
+    <body style="text-align: center;">
+      <h3>GeeksforGeeks logo</h3>
+      <img src=
+      "https://media.geeksforgeeks.org/
+      wp-
+      content/uploads/geeksforgeeks-
+      13.png"
+          width="420"height="100"
+           alt="GeeksforGeeks.org"
+           style="border:5px solid balck">
+    </body>
+</html>
+
+<!--Example5-->
+<html>
+<head>
+  <title>Page layout</title>
+  <style>
+   .head1 {
+      font-size: 40px;
+      color: #009900;
+      font-weight: bold;
+      .head2 {
+      font-size: 17px;
+      margin-left: 10px;
+      margin-bottom: 15px;
+   }
+    body {
+      margin: 0 auto;
+      background-position: center;
+      background-size: contain;
+   }
+
+   .menu {
+      position: sticky;
+      top: 0;
+      background-color: #009900;
+      padding: 10px 0px 10px 0px;
+      color: white;
+      margin: 0 auto;
+      overflow: hidden;
+   }
+    .menu a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .menu-log {
+      right: auto;
+      float: right;
+    }
+     footer {
+        width: 100%;
+        bottom: 0px;
+        background-color: #000;
+        color: #fff;
+        position: absolute;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+     }
+     .body_sec {
+       margin-left: 20px;  
+     }
+  </style> 
+</head>
+<body>
+   
+    <!--Header section-->
+   <header>
+   <div class="head1">GeeksforGeeks</div>
+   <div class="head2">A computer science portal for Geeks</div>
+</header>
+
+  <!--Menu Navigation Bar-->
+  <div class="menu">
+   <a href="#home">HOME</a>
+   <a href="#news">NEWS</a>
+   <a href="#notifications">NOTIFICATIONS</a>
+   <div class="menu-log">
+     <a href="#login">LOGIN</a>
+    </div>  
+   </div>
+
+   <!--Body section -->
+   <div class="body_sec">
+      <section id="content">
+       <h3>Content section</h3>
+     </section>  
+   </div>
+
+   <!--Footer section-->
+   <footer>Footer section</footer>
+   </body>   
+</html>

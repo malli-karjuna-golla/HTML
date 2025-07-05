@@ -1,0 +1,79 @@
+  ## changing link colors in HTML ##
+ -> An undirected link appears underlined and blue in color by default.
+ -> A visited link appears underlined and purple in color by default.
+ -> An active link appears underlined and red in color by default.
+ -> The appearances of links can be changed by using CSS.
+
+  ## Target Attribute in links ##
+ ->The target is used to specify the location where the linked document is opened.
+ -> The various options that can be used in the target attribute are listed below in the table.
+
+    ## Using image as a link in HTML ##
+ * An image link can be used to create a link to be specified URL.
+ * When the viewer click on the link ,it redirects them to another page.
+ * The code is <a href="url">
+ <img src="file address (on device or a web)"alt="_" style=" width:_;height:_;border:_"></a>
+
+Note: img src stands for image source(i.e URL or file address)
+
+  ## Creating a Bookmark link for a webpage ##
+  -> A bookmark is a link that can be used to jump to specified portion of a webpage.
+  -> Bookmarks are very useful if awebpage is quite long.
+  -> Steps to create a bookmark are:
+    1.Using the id attribute ,create a bookmark.
+    <h2 id="T17"> Topic 17</h2>
+    2.Add the specified portion of the webpage to the bookmark.
+    <p> <a href="#T17"> Jump to Topic 17</a></p>
+
+    ------------  IMAGE LINK -----------
+ * In HTML <img> tag is used to add image inside webpage/website.
+ * Syntax:
+        <img src=" alt=" width=" height="">
+ * The following attributes are used in <img> tag:
+  #src:It is used to specify the path to the image.
+  #alt:
+    ->It is used to specify an alternate text for the image.
+    ->It is useful as it informs to the user about what the image means
+  #crossorigin:
+    ->It is used to import images from third party sites.
+    ->It allows cross-origin access to be used with canvas.
+  #height:It is used to specify the height of the image.
+  #width:It used to specify the width of the image.
+  #ismap:It is used to specify an image as a server-side image map.
+  #loading:
+    ->It is used to specify whether a browser should refer loading of images.
+    ->until some conditons are met are load an in image immediately.
+  #iongdesc:It is used to specify a URL to a detailed description of an image.
+  #referrpolicy:
+    It is used to specify which referrerinformation to use,when fetching an image
+  #sizes:It is used to specify image sizes for different page layouts.
+  #srcset:It is used to specify a list of image files to use in different situations
+  #usemap:It is used to specify an image as a client-side image map.
+  
+---------- PAGE LAYOUT FORK HTML ----------
+-> Page layout is the part of graphic design that deals with the arrangement of visual elements on a page.
+-> Page layout is used to make the web pages look better.
+-> It establishes the overall appearance,relative importance,and relationship between the graphic elements to achieve a smoothflow of information.
+
+             Header section
+             Navigation bar
+Index
+             content section
+
+             Footer sectipn
+  ##  Page layout information ##
+  *Header:
+   ->The part of a front end which is used at top of the page.
+   -><header> tag is used to add header section in web pages.
+  *Navigation bar:
+   ->The navigation bar is same as menu bar list.
+   ->It is used  to display the content information using hyperlink.
+  *Index/sidebar:
+   ->It holds the additional information or advertisements.
+  *Content section:
+   ->The content section is the main part where content is displayed.
+  *Footer section:
+   ->The footer section contains the contact information and other query related to web pages.
+   ->The footer section aalways put on the bottom of the web pages.
+   ->The <footer> tag is used to set the footer in web pages.
+   
