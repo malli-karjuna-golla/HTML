@@ -1,0 +1,101 @@
+                          ------ FORMS -----
+
+-><form> is a HTML element to collect input data with containing interactive controls.
+->It provides facilities to input text,number,values,email,password and control fields such as checkboxes,radiobuttions,submit buttions,etc.
+->Form is a container that contains input elements ,like text,email,number,radio buttions,checkboxes,submit buttions, etc.
+->Forms are generally used when you want to collect data from the user.
+->Forms are created by placing input fields within paragraphs,preformatted text,lists and tables.this gives considerable flexibility in designing the layout of forms.
+Syntax:- 
+     <form>
+        <!--form elements-->
+     </form>
+
+       ##  Form Elements ##
+
+*<Label>: It defines label for <form> elements.
+   
+*<input>: It is used to get input data from the form in various type such as text,password,email,etc by changing its type.
+
+*<button>: It defines a clickable button to control other elements or execute a functionality.
+    
+*<select>: It is used to create a drop-down list.
+    
+*<textarea>: It is used to get input long text content.
+    
+*<fieldset>: It is used to draws a box around other form elements and croup the related elements.
+
+*<legend>: It defines the caption for fieldset elements.
+    
+*<datalist>: It is used to specify the pre-defined list options for input controls.
+    
+*<output>: It display the output of performed calculations.
+
+*<option>: It is used to define option in drop-down list.
+    
+*<optgroup>: It used to defines group related options in a drop down llst.
+    
+    ## Textbox in HTML Form ##
+
+->In an Html form ,we use <input> tag by assigning type attribute value to text to input single line input. 
+->To define type attribute 
+syntax:
+      <input type ="text"/> <input/>
+      
+   ## Password in an HTML Form ##
+   
+We can change type value  text to password to get the input password.
+
+     ## Radio Button in An HTMl Form ##
+
+->To create a radio button ,we use the <input> tag following by radio type to provide users to choose a limited number of choices.
+Syntax:
+  <input type="radio"
+  name="radio_button_name"
+  value="radio_button_value" />
+Note:-The radio button must have shared the same name to be treated as a group.
+      The value attribute defines the unique value associated with each radio button.
+
+    ## Checkbox in an Html Form ##
+    
+->To create a checkbox in an Html form,we use the <input> tag followed by the input type checkbox.
+->It is a square box to ticked to activate this and it is used to chose more options at a time. 
+Syntax:
+  <input type="checkbox"
+  name="select_box_name"
+  value="select_box_value"
+  
+ Note:-The name and value attributes are used to send the checkbox data to the server.
+
+     ## Combobox ##
+
+->Combobox is used to create a drop-down menu in your form which contains multiple options.
+->So,to create an combobox in an HTML form ,we use the <select> Tag with <option> tag.
+->It is also known as a drop-down menu. 
+syntax:
+   <select name="select_box_name">
+    <option value="value1">option1</option>
+    <option value="value2">option2</option>
+    <option value="value3">option3</option>
+   </select> 
+   
+     ## Submit button ##
+
+->In the HTML form,submit button is used to submit the detais of the form to form handler.
+->A form handler is a file on the server with a script that is used to process input data.
+syntax:
+     <button type="submit">submit</button>
+     
+     ## Text Area ##
+
+->In the HTML form,a textarea is used to add comments or reviews,or addresses in the form. 
+->The textarea is a multi-line text input control.
+->It contains an unlimited number of characters,and the text readers in a fixed width font and the size of the textarea is given by the <rows> and <cols> attributes.
+->To create a textarea in the form use the <textarea> tag.
+ syntax:
+   <textarea name="textarea_name">content</textarea>
+note:-The name attribute is used to reference the textarea data after it is send to server.             
+  
+      
+      
+
+         
