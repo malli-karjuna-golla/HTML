@@ -1,0 +1,186 @@
+What is CSS? |Fork CSS
+->CSS(Cascading Style Sheets) is a stylesheet language used to design the webpage to make it attractive.
+->The reason for using this is to simplify the process of making web pages presentable.
+->It allows you to apply styles to web pages.
+->More importantly,it enables you to do this independent of the HTML.
+
+Why we learn CSS?
+->Styling is the essential property for any website.
+->It increases standards and overall look of the website that makes it easier for the user to interact with it.
+
+-------- TYpes of CSS -------
+
+There are three types of CSS which are given below:
+     *Inline CSS
+     *Internal or Embedded CSS
+     *External CSS 
+     
+
+#Inline CSS:
+  ->Inline CSS contains the CSS property in the body section attached element is known as inline CSS.
+  ->This kind of Style is specified within an HTML tag using the style attribute.
+  
+#Internal or Embedded CSS:
+   ->This can be used whwn a single HTML document must be styled uniquely.
+   ->The CSS rule set should be within the HTML file in the head section i.e the CSS is embedded within the HTML file.
+   
+#External CSS:
+   ->External CSS contains separate CSS file which contains only style property with the help of the big attribute.
+   ->For Example (class,id,heading...etc).
+   ->CSS property is written in a separate file with .css extension and sholud be linked to the HTML document using link tag.
+   ->This means that for each element,style can be set only once and that will be applied across web pages.
+   ->link tag is used to link the external style sheet with the html. 
+   ->href attribute is used to specify the location of the external style sheet file.
+   
+-------- Properties of CSS -------
+
+->Inline CSS has the highest priority,then comes internal/Embedded followed by External CSS which has the least priority.
+->Multiple style sheets can be defined on one page.
+->If for an HTML tag,styles are defined in multiple sheets then the below order will be followed.
+    *As inline has the highest priority,any styles that are defined in the internal and external style sheets are overhidden by inline sheets.
+    *Internal or Embedded stands second in the priority list and overrides the styles in the external style sheet.
+    *External style sheets have the least priority,if there are no styles defined either in inline or internal style sheet then external style sheet rules are applied for the HTML tags.
+     
+---------- Text Formatting ----------
+
+->CSS Text formatting properties is used to format and style text.
+->CSS text formatting include following properties:
+ #Text color:
+*Text color property is used to set the color of the text.
+*Text-color can be set by using the name "red".hex value "#ff0000" or by its RGB value "rgb(255,0,0)".
+Syntax:
+  body 
+  {
+   color:color name;
+  }
+  
+ #Text alignment:
+*Text alignment property is used to set the horizontal alignment of th text.
+*The text can be set to left,right,centered and justified alignment.
+*In justified alignment ,line is streched such that left and right margins are straight.
+syntax:
+body
+{
+   text-align:alignment type;
+}
+
+#Text Decoration:
+*Text decoration is used to add or remove decorations from the text.
+*Text decoration can be underline,overline,line-through or none.
+syntax:
+  body 
+  {
+   text-decoration:decoration type;
+  }
+
+ #Text TransFormation:
+*Text transformation property is used to change the case of text,uppercase or lowercase.
+*Text transformation can be uppercase,lowercase or capitalise.
+*Capitalise is used to change the first letter of each word to uppercase.
+syntax:
+ body 
+ {
+   text-transformation:type;
+ } 
+
+ #Text indentation:
+*Text indentation property is used to indent the first line of the paragraph.
+*The size can be in px,cm,pt.
+syntax:
+ body{
+   text-indent:size;
+ }
+ 
+ #Letter Spacing:
+*This property is used to specify the space between the characters of the text.
+*The size can be given in px.
+syntax:
+ body 
+ {
+   letter-spacing:size;
+ }
+
+
+ #Line weight:
+ *This property is used to set the space between the lines.
+ syntax:
+  body 
+  {
+   line-height:size;
+  }
+
+#Text Direction:
+*Text direction property is used to set the direction of the text.
+*The dirction can be set by using rtl:riht to left.
+*Left to right is the default direction of the text.
+syntax:
+body 
+{
+   dirction:rtl;
+}
+
+#Text Shadow:
+*Text shadow property is used to add shadow to the text.
+*You can specify the horizontal style,vertical size and shadaw color for the text.
+syntax:
+body 
+{
+   text-shadow:horizontal size vertical size color name;
+}
+
+#word Spacing:
+*word spacing is used to specify the space between the words of the line.
+*The size can be given in px.
+syntax:
+body 
+{
+   word-spacing:size;
+}
+
+#Font-family: 
+*The Font-family property specifies the font of an element.
+*The font-family can be categorized into two types:
+*family-name:-
+ It contains the name of a font-family,such as "times,courier,arial"..etc 
+*generic-family:- 
+ It cantains name of a generic-family,such as "serif,sans-serif,fantasy,monospace". 
+ Syntax:
+ element_selector {
+   font-family:family-name\generic-family|initial|inherit;
+ }
+        ## Property values##
+*fonts-name:This specifies the name of the font in quotes separated by commas.
+*generic-family:It is used to set the font of text in an HTML document from the list of avilable fonts from the font fool.
+*initial:it is used to set an elements CSS property to its default value.
+*inherit:It is used to inherit a property to an element from its parent element property value.
+Note:-The font-name can be declared with the single quotes when using the style attribute in the HTML.
+
+
+#Font-size: 
+*The font-size property in CSS is used to set the font size of text in HTML document.
+syntax:
+  font-size:medium|xx-small|x-large|x-large|xx-large|smaller|larger|initial|inherit;
+    ## property values ##
+*absolute-size:The absolute-size is used to set the font-size absolutely.
+   The default value of absolute-size is medium.
+   The list of absolute-size property are xx-small,x-small,small,medium,large,x-large,xx-large. 
+ syntax:
+  font-size:medium|xx-small|x-small|small|large|x=large|xx-large;. 
+
+ #font Strech :
+ *The font-strech property in CSS is used to set the text wider or narrower.
+ *This property is not working any font. 
+ *Its only work when font-family has a width-variant face.
+ syntax:
+ font-strech:normal|ultra-condensed|condensed|semi-condensed|semi-expanded|expanded|extra=expanded|ultra=expanded 
+    ## property values ##
+*normal:It is default font face,it does not stretch the font. 
+*ultra-condensed:It is used to specify font face more  condensed than normal.
+*extra-condensed:It is used to set text narrower then normal and not narrower then ultra condensed.
+*condensed:It is used to set text narrower then semi-condensed and not narrower then extra-condensed.
+*semi-condensed:It is used to set text narrower then normal and  not narrower then semi-condensed.
+*semi-expanded:It is used to set text wider than normal,but not wider then expanded.
+*expanded:It is used to set text wider then semi expanded,but not wider then extra-condensed. 
+*extra-condensed:It is used to set text wider than expanded,but not wider then ultra-expanded.
+*ultra-expanded:It is used to set text wider than ultra-expanded. 
+Note:-This property will not work on any font. 
