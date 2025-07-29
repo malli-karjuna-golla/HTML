@@ -1,0 +1,120 @@
+#Font style:
+*A font-style CSS property is used to style the given particular text in a normal,italic,or oblique face from its font-family. 
+*Using,the font-style property,we can assign importance along with decorating the specific text.
+syntax:
+   font-style:
+    normal|italic|oblique|initial|inherit
+    ## Property values ##
+*normal:- 
+->This is the default value of the font-style for which the browser will display normal font text.
+*italic:- 
+->This font-style is used to display the text as italic in the browser.
+*oblique:-
+->This font-style specifies an angle for the slant of the text.
+->The displayed font-style is oblique in the browser.
+*initial:-
+->This font-style property is used to set the font to its default value.
+*inherit:- 
+->This font-style property is used to inherit the current property from its parent eleement.
+
+#Font Variant:
+*The font-variant property is used to converted all lowercase letters into uppercase letters.
+*But the converted upper letters appear too small font-size than the original uppercase letters.
+syntax:
+font-variant:normal|small-caps|initial;
+
+#font Weight:
+*The font-weight property of the CSS is used to set the weight or thickness of the font being used with the HTML text.
+*The font-weight applied will depend on font-family used and the browser.
+*For instance,some font-family is available only in specific weights.
+syntax:
+font-weight:
+normal|bold|lighter|bolder|number|initial|inherit|unset;
+  ## Property values ##
+*normal:-
+->This is the default font-weight & defines the normal font-weight.
+->It is equal to the number value 100.
+*bold:-
+->This defines the bold font-weight.
+->It is equal to the number value 700.
+*lighter:-
+->This makes the font-weight one level lighter than the parent element.
+*bolder:-
+->This makes the font-weight one level heavier than the parent element.
+*number:- 
+->This sets the font-weight according to the number specified.
+->the number can be range between the 1 to 1000.
+ #Global values:
+*initial:- 
+->This sets the font-weight to the initial(default) value.
+*inherit:- 
+->This sets the font-weight equal to the value inherited from its parent element.
+*unset:- 
+->This sets the font-weight equal to the va;ue inherited from its parent element since font-weight is an inheritable property.    
+
+------- Styling images to fit in a Container --------
+
+->To auto-resize an image or video to fit in a div container use object-fit property.
+->It is used to specify how an image or video fits in the container.
+
+Object-fit property:
+->This property is uesd to specify how an image or video resize and fit the container.
+->It tells the content how to fit in a specific div container in various way such as preserve that aspect ratio or strech up and take up as much as possible.
+Note:-The property object-fit:cover,will cut the sides of the image,preserving the asp[ect ratio,and also filling in space.
+
+----- Styling links -------
+
+->Link is a connection from one web page to another web pages.
+->CSS property can be used to style the links in various different ways.
+ ## states of links ##
+ ->Before discussing CSS properties,it is important to know the states of a link. 
+ ->Links can exist in different states and they can be styled using pseudo classes.
+ ->There are four state of links given below:
+   1.a:link=>This is a normal,unvisited link. 
+   2.a:visited=>This is a link user visited atleast once.
+   3.a:hover=>This is a link when mouse hovers over it.
+   4.a:active=>This is a link which is just clicked.
+Syntax:
+  a:link {
+    color:color_name;
+  }
+  
+->color_name can be given in any format like color name(green),HEX value(#5570f0) or RGB value rgb(25,255,2).
+->There is another state 'a:focus'which is used to focused when a user uses tab key to navigate through the links.
+ ## Default value of links ##
+  *By default the links created are underlined.
+  *When mouse is hovered above a link,it changes to a hand icon.
+  *Normal/unvisited links are blue.
+  *Visited links a colored purple.
+  *Active links are colored red.
+  *Whwn a link is focused ,it has an outline around it.
+
+----- CSS properties of links -------
+Some basic CSS properties of links are given below:
+
+*Color:This property is used to change the color of link text.
+Syntax:
+  a {
+    Color:color_name;
+  }
+  
+*font-family:This property is used to cahnge the font type of a link. 
+syntax:
+  a {
+    font-family:"family name"
+  }
+  
+*Text-Decoration:This property is basically used to remove /add underlines from/to a link. 
+syntax:
+  a {
+    text-decoration:none;
+  }
+  
+*back-ground-color:This property is used to set the background color of link. 
+syntax:
+  a {
+    background-color:color_name;
+  } 
+  
+*CSS link Button:
+->CSS links can also be styled using buttons/boxes. 
