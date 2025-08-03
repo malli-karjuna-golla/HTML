@@ -1,0 +1,452 @@
+<!--Example1-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <style>
+            .box {
+                background: red;
+                border: 1px solid black;
+                margin: 10px;
+            }
+            .parent {
+                background: white;
+                border: 1px solid black;
+            }
+            .fifty-percent {
+                width: 50%;
+            }
+            .one-hundred {
+                width: 100px;
+            }
+            .parent {
+                width: 250px;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <h3>output-1</h3>
+        <div class="box fifty-percent">50%</div>
+        <div class="box one-hundred">100px</div>
+        <hr>
+        <h3>output-2</h3>
+        <div class="parent">
+        <div class="box fifty-percent">50%</div>
+        <div class="box one-hundred">100px</div>
+        </div>    
+    </body>
+</html>
+
+<!--Example2-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            .box {
+                background: red;
+                border: 1px solid black;
+                margin: 10px;
+            }
+            .parent {
+                background: white;
+                border: 1px solid black;
+            }
+            .fifty-percent {
+                width: 50%;
+            }
+            .fifty-vw {
+                width: 50vw;
+            }
+            .twenty-five-vh {
+                height: 25vh;
+            }
+            .parent {
+                width:100px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h3>output1</h3>
+        <div class="box fifty-percent">50%</div>
+        <div class="box fifty-ew">50ew</div>
+        <div class="box twenty-five-vh">25vh</div>
+        <hr>
+        <div class="parent">
+        <div class="box fifty-percent">50%</div>
+        <div class="box fifty-ew">50ev</div>
+        <div class="box twenty-five-vh">25vh</div>
+        </div>    
+    </body>
+</html>
+
+
+<!--Example3-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <style>
+        .parent {
+            background: white;
+            border: 1px solid black;
+        }
+        .one-rem {
+            font-size: 1rem;
+        }
+        .one-em {
+            font-size: 1em;
+        }
+        .two-rem {
+            font-size: 2rem;
+        }
+        .two-em {
+            font-size: 2em;
+        }
+        .parent {
+            font-size: 30px;
+        }
+        </style>
+    </head>
+    <body>
+        <h3>output-1</h3>
+        <div class="one-rem">1rem</div>
+        <div class="one-em">1em</div>
+        <div class="two-rem">2rem</div>
+        <div class="two-em">2em</div>
+        <hr>
+        <h3>output-2</h3>
+        <div class="parent">    
+            <div class="one-rem">1rem</div>
+            <div class="one-em">1em</div>
+            <div class="two-rem">2rem</div>
+            <div class="two-em">2em</div>
+            </div>
+    </body>
+</html>
+
+<!--Example4-->
+
+<!DOCTYpe html>
+<html>
+<head>
+    <title>css box model</title>
+    <style>
+        .main {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .gfg {
+            margin-left: 60px;
+            border: 50px solid #009900;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            padding: 50px;
+            border-radius: 60px;
+        }
+        .gfg1 {
+            font-size: 42px;
+            font-weight: bold;
+            color: #009900;
+            margin-top: 60px;
+            background-color: #c5c5db;
+        }
+        .gfg2 {
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #c5c5db;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">CSS Box-Model Property</div>
+    <div class="gfg">
+    <div class="gfg1">GeeksforGeeks</div>
+    <div class="gfg2">A computer science portal for geeks</div>    
+    </div>
+</body>
+</html>
+
+<!--Example5-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+    <style>
+        .main {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #box {
+            padding-top: 40px;
+            width: 400px;
+            height: 100px;
+            border: 50px solid green;
+            margin: 50px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 100px;
+        }
+        }</style>
+        </head>
+        <body>
+            <div class="main">CSS Box-Model property</div>
+            <div id="box">GeeksforGeeks</div>
+        </body>
+</html>
+
+<!--Example6-->
+
+<!DOCTYpe html>
+<html>
+<head>
+    <title>CSS | Display property</title>
+    <style>
+        #geeks1{
+            height: 100px;
+            width: 200px;
+            background: teal;
+            display: block;
+        }
+        #geeks2{
+            height: 100px;
+            width: 200px;
+            background: cyan;
+            display: block;
+        }
+        #geeks3{
+            height: 100px;
+            width: 200px;
+            background: green;
+            display: block;
+        }
+        .gfg {
+            margin-left: 20px;
+            font-size: 42px;
+            font-weight: bold;
+            color:#009900;
+        }
+        .geeks {
+            margin: 50px;
+            text-align: center;
+        }
+        .main {
+            margin: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="gfg">GeeksforGeeks</div>
+    <div class="geeks">display:block;property</div>
+    <div class="main">
+    <div id="geeks1">Block1</div>
+    <div id="geeks2">Block2</div>
+    <div id="geeks3">Block3</div>    
+    </div>
+</body>
+</html>
+
+
+<!--Example7-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <title>css | Display property</title>
+        <style>
+            #main (
+                height:200px;
+                width:200px;
+                background:teal;
+                display:inline-block;
+            )
+            #main1 {
+                height: 200px;
+                width: 200px;
+                background: cyan;
+                display: inline-block;
+            }
+            #main3 {
+                height:200px;
+                width: 200px;
+                background: green;
+                display: inline-block;
+            }
+            .gfg {
+                margin-left: 20px;
+                font-size: 42px;
+                font-weight: bold;
+                color: #009900;
+            }
+            .geeks {
+                font-size: 25px;
+                margin-left: 30px;
+            }
+            .main {
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gfg">GeeksforGeeks</div>
+        <div class="geeks">display:inline-block;property</div>
+        <div class="main">
+            <div id="main1">Block1</div>
+            <div id="main2">Block2</div>
+            <div id="main3">Block3</div>
+        </div>
+    </body>
+</html>
+
+<!--Example8-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <title>css | Display property</title>
+        <style>
+            #main (
+                height:200px;
+                width:200px;
+                background:teal;
+                display:inline;
+            )
+            #main1 {
+                height: 200px;
+                width: 200px;
+                background: cyan;
+                display: inline;
+            }
+            #main3 {
+                height:200px;
+                width: 200px;
+                background: green;
+                display: inline;
+            }
+            .gfg {
+                margin-left: 20px;
+                font-size: 42px;
+                font-weight: bold;
+                color: #009900;
+            }
+            .geeks {
+                font-size: 25px;
+                margin-left: 30px;
+            }
+            .main {
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gfg">GeeksforGeeks</div>
+        <div class="geeks">display:inline;property</div>
+        <div class="main">
+            <div id="main1">Block1</div>
+            <div id="main2">Block2</div>
+            <div id="main3">Block3</div>
+        </div>
+    </body>
+</html>
+
+<!--Example9-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <title>css | Display property</title>
+        <style>
+            #main (
+                height:200px;
+                width:200px;
+                background:teal;
+                display:block;
+            )
+            #main1 {
+                height: 200px;
+                width: 200px;
+                background: cyan;
+                display: cyan;
+            }
+            #main3 {
+                height:200px;
+                width: 200px;
+                background: green;
+                display: block;
+            }
+            .gfg {
+                margin-left: 20px;
+                font-size: 42px;
+                font-weight: bold;
+                color: #009900;
+            }
+            .geeks {
+                font-size: 25px;
+                margin-left: 30px;
+            }
+            .main {
+                margin: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gfg">GeeksforGeeks</div>
+        <div class="geeks">display:none;property</div>
+        <div class="main">
+            <div id="main1">Block1</div>
+            <div id="main2">Block2</div>
+            <div id="main3">Block3</div>
+        </div>
+    </body>
+</html>
+
+<!--Example10-->
+
+<!DOCTYpe html>
+<html>
+    <head>
+        <title>CSS Positioning Element</title>
+        <style>
+     body {
+        margin: 0;
+        padding: 20px;
+        font-family: sans-serif;
+        background: #efefef;
+     }
+     .fixed {
+        position: static;
+        background: #cc0000;
+        color: #ffffff;
+        padding: 30px;
+        top: 50;
+        left: 10;
+     }
+     span {
+        padding: 5px;
+        border: 1px #ffffff dotted;
+     }
+        </style>
+    </head>
+    <body>
+        <div class="static">This div has <span>position:staic</span></div>
+        <pre>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae,
+                     suscipit debitis quos, deserunt odio asperiores in harum accusantium nisi doloribus, 
+            mollitia illo. Quia nulla odio, ipsum suscipit quis molestias eius.
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Mollitia deserunt soluta nulla cupiditate ducimus saepe reprehenderit. Sed vero minus, 
+                    saepe minima illo quae nulla tempora architecto, magni itaque quisquam aliquam!
+        </pre>
+    </body>
+</html>
+
+
+

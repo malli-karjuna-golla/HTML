@@ -1,0 +1,160 @@
+---------- CSS Units -------
+
+* %:- The % unit is used to set the font-size relative the current font-size. 
+
+* em:- It is used to set the relative size,and it is relative to the font-size of the element.
+   Note:Here 2em meaning 2 times the size of current font. 
+
+* rem:- Relative to the browser base font-size. 
+
+* Px:- It defines the font-size in terms of fixels. (96px=1in)
+
+* vh:- Relative to 1% of the height of the viewport.
+
+* vw:- Relative to 1% of the width of the viewport.
+
+
+-------Diiference b/w em and rem Units--------
+There are two types of CSS units.They are :
+      1.Absolute units:- 
+                     ->Thse are fixed and not relative to anything else.
+                     ->They are always identical and involves cm,mm,px,etc.
+      2.Relative Units:-
+                     ->It may be the size of the parent element or the size of main HTML.
+                     ->It involves em,rem,vw,vh,etc and those are also scalable units.
+                     
+
+--------- Box Model -------- 
+
+->The CSS box model is a container that contains multiple properties including border,margin,padding, and the content itself.
+->It is used to create the design and layout of web pages.
+->It can be used as a toolkit for customizing the layout of different elements
+->The web browser renders every element as a rectangular box according to the CSS box model.
+
+## properties ##
+
+*content:This property is used to displays the text,images,etc,that can be sized using the width & height property.
+
+*padding:This property is used to create space around the element,inside any defined border.
+
+*border:This property is used to cover the content & any padding,& also allows to set the style,color, and width of the border.
+
+*margin:This property is used to create space around the element ie,around the border area.
+
+->While setting the width and height properties of an element with css,we have only set the width and height of the content area. 
+->We need to add padding,borders,and margins in order to calculate the full size of an element.
+consider an below example 
+
+p {
+   width:80px;
+   height:70px;
+   margin:0;
+   border:2px solid black;
+   padding:5px;
+}
+
+The total width for the element can be calculated as :
+  Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+Margin Collapse:
+ When two margins from different elements overlap the equivalent margin is the greater of two margin,This is called margin collaopse.
+ 
+ --------- Display property -------
+
+ ->The display property in CSS defines how the components(div,hyperlink,heading,etc)are going to be placed on the webpage.
+ ->As the name suggests,this property is used to define the display different parts of a web page.
+ syntax:
+ display:value;
+     ## Property values ##
+*inline:It is used to displays an element as an inline element.
+
+*block:It is used to displays an element as a block element.
+       This property is used as the default property of div.
+       This property places the div one after the another vertically.
+       the height and width of the div can be changed using the block property.
+
+*contents:It is used to disappear the container.
+
+*flex:It is used to display an element as a block-level flex container.
+
+*grid:It is used to display an element as a block-level grid container.
+
+*inline-block:It is used to display an element as an inline-level block container.
+              This features uses the both properties(block and inline).
+              So,this property aligns the div inline but the difference is it can edit the height and width of block.
+              Basically,it will align the div both in block and inline fashion.  
+
+*inline-grid:It is used to display an element as an  grid-level block container.
+
+*inline-table:It is used to diaplay an inline-level table.
+              This property is the default property of anchor tags.
+              This is used to place the div inline i.e in a horizontal manner.
+              The inline display property ignores the  height and the width set by the user. 
+
+*list-item:It is used to display all the  elements in <li> element.
+
+*run-in:It is used to display an element inline or block level,depending on the context.
+
+*Table:It is used to set the behaviour as <table> for all elements.
+
+*table-caption:It is used to set the behaviour as <caption> for all elements.
+   
+*table-column-group:It is used to set the behaviour as <column> for all elements.
+   
+*table-header-group:It is used to set the behaviour as <header> for all elements.
+   
+*table-footer-group:It is used to set the behaviour as <footer> for all elements.
+   
+*table-row-group:It is used to set the behaviour as <row> for all elements.
+   
+*table-cell:It is used to set the behaviour as <td> for all elements.
+   
+*table-column:It is used to set the behaviour as <col> for all elements.
+
+*table-row:It is used to set the behaviour as <tr> for all elements.
+
+*none:It is used to remove the element.
+      This property hides the div or the container which uses this property.
+      Using it on one of the div it will make working clear.
+
+*initial:It is used to set the default value.
+
+*inherit:It is used to inherit the property from it's parents elements.
+
+-------- Position Property -------
+->The position property in CSS tells about the method of positioning for an element or an HTML entity.
+->There are five different types of position property available in CSS:
+     1.fixed
+     2.static
+     3.Relative
+     4.Absolute
+     5.Sticky
+->The positioning of an element can be done using the top,right,bottom,and down
+->These specify the distance of an HTML element from the edge of the viewport.
+->To set the position by the four properties,we have to declare the positioning method
+
+*Fixed:
+->Any HTML element with position:fixed property will be positioned relative to the viewport.
+->An element with fixed positioning allows it to retain at the same position even we scroll the page.
+->we can set the position of the element using the top.right,bottom,left.
+
+*Static:
+->This method of positioning is set by default.
+->if we don't mention the method of positioning for any element,the element has the position:static method by default.
+->By defining static,the top,right,bottom and left will not have any control over the element.
+->The element will be positioned with the normal flow of the page.
+
+*Relative:
+->an element with position:relative is positioned relatively with the other elements which are sitting at top of it.
+->If we set it's top,right,bottom,or,left,other elements will not fill up the gap left by the element.
+->An element with it's position set to relative and when is adjusted using top,left,right will be positioned relative to it's original position.
+
+*Absolute:
+->an element with position:absolute will be positioned with respect to it's nearest Non-static ancestor.
+->The positioning of this element does not depend upon its siblings or the elements which are at the same level.
+
+*Stiky:
+->Element with position:sticky and top:0 played a role between fixed & relative based on the position whwre it is placed.
+->if the element is placed at the middle of the document then when the user scrolls the document.
+->The sticky element starts scrolling until it touches the top.
+->whwn it touches the top,it will be fixed at that place in spite of further scrolling we can stick the element at the bottom,with the bottom properly. 
