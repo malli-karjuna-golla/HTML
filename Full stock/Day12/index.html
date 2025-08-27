@@ -1,0 +1,241 @@
+<!--Example1-->
+
+<!DOCTYPE html>
+<html>
+<title>Geeksforgeeks</title>
+<style>
+    h1 {
+        background: red;
+    }
+</style>
+<head>
+</head>
+<body>
+    <h1>GeeksForGeeks</h1>
+    <div>GeeksForGeeks is a good website for problem solving skills and development</div>     
+</body>       
+</html>
+
+<!--Example2-->
+
+<!DOCTYPE html>
+<html>
+<title>GeeksForGeeks</title>
+<style>   
+    h1 {
+        background-image: url("https://images.pixels.com/photos/17158019/pexels-photo-17158019/free-photo-of-bench-in-a-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+}
+h1 {
+    color: green;
+}
+div {
+    color: plnk;
+}
+</style>
+<head>
+</head>
+<body>
+    <h1>GeeksForGeeks</h1>
+    <div>GeeksForGeeks is a good website for problem solving skills and development</div>
+</body>   
+</html>
+
+<!--Example3-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>background-repeat property</title>
+    <style>
+        body {
+            background-image:url("https://media.geeksforgeeks.org/wp-content/uploads/geeks-25.png");
+            background-repeat:repeat-x ;
+            background-size: 200px 150px;
+            text-align: center;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>GeeksForGeeks</h1>
+    <h2>background-repeat:repeat-x</h2>
+ </body>   
+</html>
+
+<!--Example4-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #example1 {
+                color: green;
+                padding: 10px;
+                border: 1px red solid;
+                 background: url("https://images.pixels.com/photos/17158019/pexels-photo-17158019/free-photo-of-bench-in-a-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #example2 {
+                color: green;
+                padding: 10px;
+                border: 1px red solid;
+                 background: url("https://images.pixels.com/photos/17158019/pexels-photo-17158019/free-photo-of-bench-in-a-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        </style>
+    </head>
+    <body>
+        <h5>background-size:cover:</h5>
+        <div id="example1">
+            <h2>GeeksForGeeks</h2>
+            </div>
+            <h5>background-size:contain:</h5>
+            <div id="example2">
+                <h2>GeeksForGeeks</h2>
+            </div>
+    </body>
+</html>
+
+<!--Example5-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #example1 {
+                color: green;
+                padding: 10px;
+                border: 1px red solid;
+                 background: url("https://images.pixels.com/photos/17158019/pexels-photo-17158019/free-photo-of-bench-in-a-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+                background-repeat: no-repeat;
+                background-size:auto;
+            }
+            #example2 {
+                color: green;
+                padding: 10px;
+                border: 1px red solid;
+                 background: url("https://images.pixels.com/photos/17158019/pexels-photo-17158019/free-photo-of-bench-in-a-garden.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+                background-repeat: no-repeat;
+                background-size:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h5>AUTO-PROPERTY:</h5>
+        <div id="example1">
+            <h2>GeeksForGeeks</h2>
+            </div>
+        <h5>PERCENTAGE PROPERTY:</h5>
+            <div id="example2">
+                <h2>GeeksForGeeks</h2>
+            </div>
+    </body>
+</html>
+
+<!--Example6-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selectors</title>
+ <style>
+    .heading {
+        color: green;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    * {
+        color: green;
+        text-align: center;
+    }
+ </style>   
+</head>
+<body>
+    <div class="heading">
+    GeeksForGeeks
+    </div>
+    <h1>GeeksforGeeks</h1>
+    <h2>Universal selector</h2>
+    <div>
+      <p>GFG</p>
+      <p>Geeks</p>
+    </div>  
+    <p>It is a computer science portal for geeks</p>  
+</body>    
+</html>
+
+<!--Example7-->
+
+HTML 
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="external.css">
+        <style type="text/css">
+         h1 {
+            background-color: red;
+            color: white;
+         } 
+         
+         h2 {
+            color: blue;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>Internal CSS overrides external CSS</h1>
+        <h2 style="color: green;">
+            Inline CSS overrides internal CSS
+        </h2>
+    </body>
+</html>
+
+<!--Example8-->
+
+HTML 
+<html>
+    <head>
+        <style type="text/css">
+        h1 {
+            background-color: red;
+            color: white;
+        }
+
+        #second {
+            background-color: black;
+            color: white;
+        }
+        
+        .third {
+            background-color: pink;
+            color: blue;  
+        }
+
+        #second1 {
+            color: blue;
+        }
+
+        .third1 {
+            color: red;
+        }
+       </style>
+    </head>
+    <body>
+        <h1 id="second" class="third">
+            ID has highest priority.
+        </h1>
+        <h1>
+            Element selectors has lowest priority.
+        </h1>
+        <h1 class="third">
+            Classes have higher priority than element selectors. 
+        </h1>
+        <h2 style="color: green;"
+         id="second1" class="third1">
+        Inline CSS has highest priority. 
+        </h2>
+    </body>
+</html>
+            
+

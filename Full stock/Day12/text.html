@@ -1,0 +1,151 @@
+------------- Background property -------------
+
+->CSS background properties are used to define various background effects for elements.
+->These properties allow you to control the aspects such as color,image,position,size,repeat,behaviour,and more.
+->By using these properties you can create the visually appealling backgrounds for your web pages.
+
+* Background color-property:
+ This property is used to set the background color of the container.
+
+* Background-image property: 
+ This property is used to set an image as the background.
+
+* background-repeat property:
+ #repeat:
+ ->This property is used to employed to repeat the background image both horizontally and vertically.
+ ->If the image extends beyond the browser window,the last portion will be clipped.
+ 
+ #repeat-x:
+ ->By using this property,you can repeat the background image horizontally across the element.
+
+ #repeat-y:
+ ->conversely,this property repeats the background image only vertically within the element.
+
+ #no-repeat:
+ ->This property ensures that the backgound image is displayed only once,without any repetition.
+
+ * background-size property:
+    ->This property allows you to control the size of the background image.
+    ->Default value:auto
+    properties:
+    1. cover:
+    ->This value resizes the background image to cover the entire container,potentially cropping or streching it to ensure complete coverage.
+    2. contain:
+    ->Resize the background image in order to make sure the image is ly visible.
+    3.auto:
+    ->display image in original size.
+    4.initial:
+    ->It sets the property to its default value.
+    5.inherit:
+    ->It inherits the property from its parent element.
+    6.percentage:
+    ->specify the size of a background image using percent.
+    
+ * background-position property:
+    ->This property sets the starting position of a background image.
+    ->It can be set by using value (100px 20px),percentage(100% 20%) keywords(left,right,center,top,bottom). 
+    
+* background-attachment property:
+    ->This property sets whether a background image scrolls with the rest of the page or is fixed.
+    ->Values:scroll,fixed,local.
+    short-hand property:
+    div {
+        background:green url("image.png")
+        no-repeat fixed right top
+    }
+
+    Note:
+     When using the shorthand property,the order of the property values is:
+        background-color
+        background-image
+        background-repeat
+        background-attachment
+        background-position
+
+---------------- CSS Syntax and Selectors ----------- 
+
+CSS Selectors
+->THey are used to selecting HTML elements based on their element name,id,attributes,etc.
+->It can select one or more elements simultaneously.
+->CSS elements can be divided into five categories:
+
+*simple selector:- 
+ It is used to select the HTML elements based on their element name,id,attributes,etc.
+
+*Combinators selectors:- 
+ It is used for explaining the relationship between two selectors.
+
+*pseudo-classes selector:- 
+ It is used to define the special state of an element.
+
+*pseudo Elements selector:- 
+ It is a keyword added to a selector that lets you style a specific part of the selected elements.
+
+*Attribute selector selector:- 
+ It is used to select an element with some specific attribute or attribute value.
+
+The simple selector can be categorized in 3 ways:
+
+ * CSS element selector:
+ ->The element selector in css is used to select HTML elements that are required to be styled.
+ ->In a selector declaration,there is the name of the HTML element and the CSS properties which are to be applied to that element are written inside the brackets.
+ syntax:
+   element_name {
+      // CSS Property
+   }
+
+*  CSS id selector:
+->The #id selector is used to set the style of the given id.
+->The id attribute is the unique identifier in an HTML document.
+->The id selector is used with a # character.
+syntax:
+    #id_name {
+        // css Property
+    } 
+    
+* CSS class selector:
+->The class selector is used to select all elements which belong to a particular class attribute.
+->To select the elements with a particular class,use (.) character with specifying the class name.
+->The class name is mostly used to set the CSS property to the given class.
+syntax:
+    class_name {
+        // css property
+    } 
+    
+ Notes:
+  /* write CSS here */
+  h1,h2,h3,div{
+    color:red;/// h1,h2,h3 and div will be of red
+  } 
+  
+----------- CSS Specificity -------- 
+->CSS style applied by referencing external stylesheet has lowest precedence and is overridden by internal and inline CSS.
+->Internal CSS is overridden by inline CSS.
+->Inline CSS has highest priority and overriddens all other selectors.
+
+## Specificity hierarchy:
+  Every element selector has a position in the hierarchy
+
+  1.Inline style:Inline style has highest priority.
+
+  2.Identifier(ID):ID have the second highest priority.
+
+  3.Classes,pseudo-classes and attributes:Classes,pseudo-classes and attributes are come next.
+
+  4.Elements and pseudo-classes:Elements and pseudo-classes have lowest priority.
+
+Note:
+ * When two or more selectors have equal specificity,the last(latest) one counts.
+ * Universal selectors like body and inherited selectors have least specificity.
+
+ --------- Comments in CSS ------- 
+
+ ->comments in CSS is text which is not parase and is thus ignored.
+ ->They make the program more readable and understandable and increases the quality of code.
+ syntax:
+   /*content*/
+Note:
+ * We can add comments at any place of code even in the middle
+ * You can use /* */ to create multiline comments also.
+
+ 
