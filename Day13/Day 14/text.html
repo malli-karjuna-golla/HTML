@@ -1,0 +1,32 @@
+---------- Media Queries in CSS -----------
+
+->Media queries in CSS is used to create a Responsive web page to make a user friendly website.
+->It means that the view of web pages differ from system to system based on screen or media types.
+->Media is allowing us to reshape and design the user view page of the website for specific devices like Tablets,Desktops,Moblie phones etc.
+->Media queries cn be used to check many things like the following:
+   1. Width and height of the device
+   2. Orientation of the device
+   3. Resolution of the device
+   4. Aspect ratio of the device
+   5. Color of the device
+   6. Light level of the device
+   
+ ->A media query consist of a media type that can contain one or more expression which can be either true or false.
+ ->The result of the query is true if the specified media matches the type of device where the document is displayed on.
+ ->If the media query is true when the style is applied.
+ ->In simple words,it uses the @media rule to add the block of CSS properties,based on certain conditions.
+ syntax:
+    @media not|only mediatype and (expressions)
+     {
+        CSS-Code;
+    } 
+-> we can add the breakpoint to see the screen width along with the width and height of the viewport for the different devices.
+->A breakpoint is a point or key that determines when to change the layout by reshaping and adding the new rules inside the media queries.
+->There are some common breakpoints,not a standard resolution,that can be used for the different widths & heights of devices.
+ *For Moblie devices: 320px to 480px
+ *For Tablets: 481px to 768px
+ *For laptop or small-size screen:768px-1024px.
+ *For Desktop or large-size screen:1024px-1200px.
+ *For Extra large size device:1200px-more. 
+->These breakpoints can help to build responsive designs(i.e mobile-first design) by specifying the different sets of values for width & height.
+->We can also use the media queries for changing the layout of a webpage that will be depending on the orientation of the browser.

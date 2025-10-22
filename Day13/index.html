@@ -1,0 +1,152 @@
+<!------Example1----->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Default stacking order</title>
+        <style>
+            .box {
+                box-sizing: border-box;
+                font-family: Arial;
+                color: #eee;
+                width: 125x;
+                height: 125px;
+                text-align: center;
+            }
+            .blue,
+            .green {
+                position: absolute;
+            }
+            .red {
+                background: red;
+
+            }    
+            .green {
+                background: green;
+                top: 40px;
+                left: 40px;
+            }
+            .blue {
+                background: blue;
+                top: 80px;
+                left: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box green">positioned</div>
+        <div class="box blue"">positioned</div>
+        <div class="box red">non-positioned</div>
+    </body>
+</html>
+
+<!------Example2-------->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>stacking with  Z-index </title>
+        <style>
+            .box {
+                box-sizing: border-box;
+                font-family: Arial;
+                color: #eee;
+                width: 125x;
+                height: 125px;
+                text-align: center;
+            }
+            .blue,
+            .green {
+                position: absolute;
+            }
+            .red {
+                background: red;
+                z-index: 100;
+            }    
+            .green {
+                background: green;
+                top: 40px;
+                left: 40px;
+                z-index: 3;
+            }
+            .blue {
+                background: blue;
+                top: 80px;
+                left: 80px;
+                z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box green">positioned</div>
+        <div class="box blue"">positioned</div>
+        <div class="box red">Non-positioned</div>
+    </body>
+</html>
+
+<!----Example3----- >
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>stacking context</title>
+  <style>
+    .box {
+        box-sizing: border-box;
+        font-family: arial;
+        color: #eee;
+        width: 125px;
+        height: 125px;
+        text-align: center;
+    }
+
+    .blue,
+    .green,
+    .orange,
+    .purple {
+        position: absolute;
+    }
+    .red {
+        background: red;
+        z-index: 100;
+    }
+
+    .green {
+        background: green;
+        top: 60px;
+        left: 50px;
+        z-index: 1;
+    }
+
+    .orange {
+        width: 85px;
+        height: 85px;
+        left: 20px;
+        background-color: orange;
+        font-family: arial;
+        z-index: 5;
+    }
+
+    .purple {
+        background-color: purple;
+        top: 30px;
+        left: 30px;
+        z-index: 0;
+    }
+
+    .blue {
+        background: blue;
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+    }
+</style>  
+</head>
+<body>
+    <div class="boxngreen">positioned</div>
+    <div class="orange">positioned</div>
+    <div class="box purple">positioned</div>
+    <div class="box blue">positioned</div>
+    <div class="box red">Non-positioned</div>
+</body>    
+</html>
+
