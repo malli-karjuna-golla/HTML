@@ -1,0 +1,487 @@
+-----<! Example1>------- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+          <title>GeeksforGeeks CSS Media Query</title>
+        <meta name="description"
+        content="CSS Media query for all devices like moblie,tablet,desktop etc.">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="gfg-style.css">
+    </head>
+    <body>
+        <div class="gfg-div">GeeksforGeeks</div>
+        </body> 
+</html> 
+
+-----<! Example2>-------
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>flexbox</title>
+    <style>
+      .gfg_flex {
+        display: flex;
+        flex-direction: row;
+        background-color:green;
+        text-align: center;
+      }
+      .gfg_flex > div {
+        background-color:#f4f4f4;
+        width:100px;
+        height:100px;
+        margin: 10px;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .geeks {
+        font-size: 40px;
+        text-align: center;
+        color: #009900;
+        font-weight: bold;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="geeks">GeeksforGeeks</div>
+    <h2>flex-direction property</h2>
+    <div class ="gfg_flex">
+      <div>box A</div>
+      <div>box B</div>
+      <div>box C</div>
+      <div>box D</div>
+      <div>box E</div>
+    </div>
+  </body>
+</html>
+
+-----<!Example3>-------- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>flex-wrap property</title>
+    <style>
+      .gfg_flex {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: green;
+      }
+      .gfg_flex > div {
+        background-color: f4f4f4;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        font-size: 40px;
+      }
+      h2 {
+         text-align: center;
+      }
+      .geeks {
+        font-size: 40px;
+        text-align: center;
+        color: #009900;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class ="geeks">GeeksforGeeks</div>
+    <h2>flex-wrap property</h2>
+    <div class ="gfg_flex">
+      <div>box A</div>
+      <div>box B</div>
+      <div>box C</div>
+      <div>box D</div>
+      <div>box E</div>
+      <div>box F</div>
+      <div>box G</div>
+      <div>box H</div>
+      <div>box I</div>
+    </div>
+  </body>
+</html>
+
+-------- <!Example4> --------- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>justify flexbox property</title>
+    <style>
+      .flex1 {
+        display: flex;
+        justify-content: center;
+        background-color: green;
+      }
+      .flex2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: green;
+      }
+      .flex3 {
+        display: flex;
+        justify-content: space-between;
+        background-color: green;
+      }
+      .flex4 {
+        display: flex;
+        justify-content: flex-start;
+        background-color: green;
+      }
+      .flex5 {
+        display: flex;
+        justify-content: flex-end;
+        background-color: green;
+      }
+      .flex items {
+        background-color: #f4f4f4;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        text-align: center;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .geeks {
+        font-size: 40px;
+        text-align: center;
+        color: #009900;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="geeks">GeeksforGeeks</div>
+    <h2>The justify-content property</h2>
+    <b>justify-content :center</b>
+    <div class="flex1">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+    </div>
+    <br>
+    <b>justify-content :space-around</b>
+    <div class="flex2">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+    </div>
+    <br>
+    <b>justify-content :space-between</b>
+    <div class="flex3">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+    </div>
+    <br>
+    <b>justify-content :flex-start</b>
+    <div class="flex4">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+    </div>
+    <br>
+    <b>justify-content :flex-end</b>
+    <div class="flex5">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+    </div>
+  </body>
+</html>
+
+------- <!Example5> ------ 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>align-items property</title>
+    <style>
+      .flex1 {
+        display: flex;
+        height: 200px;
+        align-items: center;
+        background-color: green;
+      }
+      .flex2 {
+        display: flex;
+        height: 200px;
+        align-items: baseline;
+        background-color: green;
+      }
+      .flex3 {
+        display: flex;
+        height: 200px;
+        align-items: stretch;
+        background-color: green;
+      }
+      .flex4 {
+        display: flex;
+        height: 200px;
+        align-items: flex-start;
+        background-color: green;
+      }
+      .flex5 {
+        display: flex;
+        height: 200px;
+        align-items: flex-end;
+        background-color: green;
+      }
+      .flex-items {
+        background-color: #f4f4f4;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: 50px;
+      }
+      .h2 {
+        text-align: center;
+      }
+      .geeks {
+        font-size: 40px;
+        text-align: center;
+        color: #009900;
+        font-weight: bold;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="geeks">GeeksforGeeks</div>
+    <h2>The align-items property</h2>
+    <b>align-items:center</b>
+    <div class="flex1">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+      <div class="flex-items">4</div>
+      <div class="flex-items">5</div>
+    </div>
+    <br>
+    <b>align-items:baseline</b>
+    <div class="flex2">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+      <div class="flex-items">4</div>
+      <div class="flex-items">5</div>
+    </div>
+    <br>
+    <b>align-items:strech</b>
+    <div class="flex3">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+      <div class="flex-items">4</div>
+      <div class="flex-items">5</div>
+    </div>
+    <br>
+    <b>align-items:flex-start</b>
+    <div class="flex4">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+      <div class="flex-items">4</div>
+      <div class="flex-items">5</div>
+    </div>
+    <br>
+    <b>align-items:flex-end/b>
+    <div class="flex5">
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+      <div class="flex-items">4</div>
+      <div class="flex-items">5</div>
+    </div>
+ </body>
+</html>
+
+------ <!Example6> ------- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>align-content property</title>
+    <style>
+      .main container {
+        display: flex;
+        height: 400px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        background-color: green;
+      }
+      .main container div {
+        background-color: #f4f4f4;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: 50px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .geeks {
+        font-size: 40px;
+        text-align: center;
+        color: #009900;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="geeks">GeeksforGeeks</div>
+    <h2>The align-content property</h2>
+    <div class="main-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    </div>
+  </body>
+</html>
+
+--------- <! Example7 > --------
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid container {
+      display:inline-grid;
+      grid-template-columns:auto auto auto;
+      background-color:gray;
+      padding:5px;
+    }
+    .grid-item {
+      background-color: rgba(225,225,225,0.8);
+      border: 1px solid black;
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: green;
+      text-align: center;
+    }
+   </style>
+  </head>
+  <body>
+    <h1>GeeksforGeeks</h1>
+    <div class="grid-container">
+    <div class="grid-item">1</div>  
+    <div class="grid-item">2</div> 
+    <div class="grid-item">3</div> 
+    <div class="grid-item">4</div> 
+    <div class="grid-item">5</div> 
+    <div class="grid-item">6</div> 
+    <div class="grid-item">7</div> 
+    <div class="grid-item">8</div> 
+    <div class="grid-item">9</div> 
+    </div>
+    
+  </body>
+</html>
+
+---------- <!Example8 >  ----------- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid container {
+      display:grid;
+      grid-template-columns:auto auto auto;
+      background-color:gray;
+      grid-column-gap: 50px;
+      grid-row-gap: 50px;
+      padding:5px;
+    }
+    .grid-item {
+      background-color: rgba(225,225,225,0.8);
+      border: 1px solid black;
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      color: green;
+      text-align: center;
+    }
+   </style>
+  </head>
+  <body>
+    <h1>GeeksforGeeks</h1>
+    <div class="grid-container">
+    <div class="grid-item">1</div>  
+    <div class="grid-item">2</div> 
+    <div class="grid-item">3</div> 
+    <div class="grid-item">4</div> 
+    <div class="grid-item">5</div> 
+    <div class="grid-item">6</div> 
+    <div class="grid-item">7</div> 
+    <div class="grid-item">8</div> 
+    <div class="grid-item">9</div> 
+    </div>
+    
+  </body>
+</html>
+
+<------- <! Example9 > --------
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid container {
+      display:grid
+      grid-template-columns:auto auto auto;
+      grid-gap:10px;
+      background-color:gray;
+      padding:10px;
+    }
+    .grid-container > div {{
+      background-color: rgba(225,225,225,0.8);
+      text-align: center;
+      padding: 20px  0;
+      font-size: 30px;
+    }
+    .item1 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+    .item3 {
+      grid-row-start: 2;
+      grid-row-end: 5;
+    }
+
+    h1 {
+      color: green;
+      text-align: center;
+    }
+   </style>
+  </head>
+  <body>
+    <h1>GeeksforGeeks</h1>
+    <div class="grid-container">
+    <div class="item1">1</div>  
+    <div class="item2">2</div> 
+    <div class="item3">3</div> 
+    <div class="item4">4</div> 
+    <div class="item5">5</div> 
+    <div class="item6">6</div> 
+    <div class="item7">7</div> 
+    <div class="item8">8</div>  
+    </div>
+    
+  </body>
+
+
+
