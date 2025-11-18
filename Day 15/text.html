@@ -1,0 +1,57 @@
+------------Pseudo Classes------------
+
+->A pseudo class in CSS is used to define the special state of an element.
+->It can be combined with a CSS selector to add an effect to existing elemnets based on thier states.
+->For Example,changing the style of an element when the user hovers over it,or when a link is visited.
+->All of these can be done using pseudo classes in CSS.
+Note:That pseudo-class names are not case-sensitive.
+Syntax:
+selector:pseudo-class {
+    property:value;
+}
+->There are many pseudo-classes in CSS but some of the most commonly used pseudo-classes are:
+ *:hover -It is used to select and style an element when the user hovers over it with a pointing device.
+ *:active -It is used to select and style an element when it is being activated by the user.
+ *:focus -It is used to select and style an element when it has focus.
+ *:visited -It is used to select and style a link that has been visited by the user.
+
+ ------------Pseudo Elements------------
+
+ ->A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected elements.
+ ->For Example,styling the first letter or line of an element.
+ ->Insert content before or after the content of an element,all of these can be done by using the pseudo-elements in CSS.
+ Note:that in contrast to pseudo-elements,pseudo-classes can be used to style an element based on its state.
+
+Syntax:
+selector::pseudo-element {
+    property:value;
+}
+->THere are many pseudo-elements in CSS but the ones which are most commonly used are as follows:
+
+*::first-line Pseudo-element:- 
+  ->It applies styles to the first line of a block-level element.
+  ->Note that the length of the first line depends on many factors,including the width of the element,the width of the document,and the font size of the document.
+  ->Note that only a few properties are applied for first-line pseudo-element,such as font properties,color,background properties,word-spacing,text-decoration,line-height,and clear.
+
+*::first-letter pseudo-element:- 
+  ->It applies styles to the first letter of the first line of a block-level element,but only when not preceded by other content(such as images or inline tables).
+  ->Note that only a few properties are applied for first-line pseudo-element like font properties,color,background properties,text-decoration,vertical-align,and float.
+  
+*::before Pseudo-element:- 
+->It creates a pseudo-element that is the first child of the selected element that is the first child of the selected element.
+->It is often used to add cosmetic content to an element with the help of the content property.
+->It is inline by default.
+
+*::after Pseudo-element:-
+->It creates a pseudo-element that is the last child of the selected element.
+->It is often used to add cosmetic content to an element with the help of the content property.
+->It is inline by default.
+
+*::marker Pseudo-element:-
+->It selects the marker box of a list item,which typically contains a bullet or number.
+->It works on any element or pseudo-element set to display:list-item,such as <li>,<dt>,and <dd> elements.
+
+*::selection Pseudo-element:-
+->It applies styles to the part of a document that has been highlighted by the user such as clicking and dragging the mouse over text.
+    
+   

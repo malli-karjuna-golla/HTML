@@ -1,0 +1,336 @@
+<!-----<!Example1>-------->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS transistion-property property</title>
+    <style>
+        .box {
+            background-color: yellow;
+            width:300px;
+            height:200px;
+            margin: auto;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .box:hover {
+            background-color: orange;
+        }
+
+        h1,h2 {
+            color: green;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>:hover pseudo-class</h2>
+        <div class-"box">
+            My color changes if you hover over me!</div>
+    </body>    
+</html>
+
+<!-------- Example2 -------->
+
+<!DOCTYPE html>
+<html> 
+    <head>
+         <title>CSS transistion-property property</title>
+    <style>
+        .box {
+            background-color: yellow;
+            width:300px;
+            height:200px;
+            margin: auto;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .box:active {
+            background-color: orange;
+        }
+
+        h1,h2 {
+            color: green;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>:active pseudo-class</h2>
+        <div class-"box">
+            My color changes for a moment if you click me!
+</div>
+</body>    
+</html>
+
+<!-------- Example3 -------->
+
+<!DOCTYPE html>
+<html> 
+    <head>
+         <title>CSS transistion-property property</title>
+    <style>
+        form{
+            width:300px;
+            height:200px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 2rem;
+        }
+
+        label{
+            width:30%;
+                }        }
+
+        input{
+            background-color: default;
+            float:right;
+        }}
+
+        input:focus{
+           background-color: grey;
+        }
+
+        h1,h2{
+            color: green;
+            text-align: center;
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>:focus pseudo-class</h2>
+        <form>
+        <label for="Username">Username:</label>
+            <input type="text"name="User name" placeholder="Enter your Username"/>
+            <br>
+
+       <label for="emailid">Email-id:</label>
+            <input type="email"name="emailid" placeholder="Enter your email-id"/>
+            <br>
+        <label for="Password">Password:</label>
+            <input type="password"name="Password" placeholder="Enter your Password"/>
+            <br>
+        <label for="Phone">Phone:</label>
+            <input type="tel"name="Phone" placeholder="Enter your Phone number"/>
+            <br>
+
+        </form>
+    </body>    
+</html>
+
+<!-------- !Example4 -------->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS transistion-property property</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1,h2 {
+            color: green;
+        }
+        a:visited{
+            color: red;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>:visited pseudo-class</h2>
+
+        <p>
+            <a href="https://www.geeksforgeeks.org/" target="_blank>
+              My color changes once you visit this link </a>
+        </p>
+    </body>
+</html>
+
+<!-------- Example5 -------->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS ::first-line demo</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            color: green;
+            font-size: large;
+            text-align: center;
+        }
+
+        p::first-line{
+            color: red;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>::first-line pseudo-element</h2>
+        <p>This is a paragraph using first-line pseudo-element to style first line of the paragraph.Content in the first line turns red and becomes bold.
+        </p>
+        </body>
+       </html>
+
+   <!-------- Example6 -------->
+   
+   <!DOCTYPE html>
+   <html lang="en">
+    <head>
+        <title>::first-letter demo</title>
+    <style>
+       body{
+            background-color: whitesmoke;
+            color: green;
+            font-size: large;
+            text-align: center;
+        }
+
+        p::first-letter{
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>::first-letter pseudo-element</h2>
+
+        <p>This is a paragraph using first-letter pseudo-element to style first letter of the paragraph.First-letter element turned the first letter of this paragraph to red.
+            and made it bold </p>
+    </body>
+   </html>
+
+<!-------- Example7 -------->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>::before demo</title>
+    <style>
+       body{
+            background-color: whitesmoke;
+            color: green;
+            font-size: large;
+            text-align: center;
+        }
+
+        p::before{
+            content:"";
+            color: red;
+            font-size: 30px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>::before pseudo-element</h2>
+
+        <p>This is a paragraph to which we added red color qutation marks using ::before pseudo-element.</p>
+    </body>
+   </html>
+
+<!-------- Example8 -------->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>::after demo</title>
+    <style>
+       body{
+            background-color: whitesmoke;
+            color: green;
+            font-size: large;
+            text-align: center;
+        }
+
+        p::after{
+            content:"";
+            color: red;
+            font-size: 30px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>::after pseudo-element</h2>
+
+        <p>This is a paragraph to which we added red color qutation marks using ::after pseudo-element.</p>
+    </body>
+   </html>
+
+<!-------- Example9 -------->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>::marker demo</title>
+    <style>
+       body{
+            background-color: whitesmoke;
+            color: green;
+            font-size: large;
+            text-align: center;
+        }
+        ul{
+            width: 40px;
+        }
+        ul li::marker{
+            color: red;
+            font-size: 30px;
+        }
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>::marker pseudo-element</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </body>
+   </html>
+
+<!-------- Example10 -------->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>::selection demo</title>
+    <style>
+       body{
+            background-color: whitesmoke;
+            color: green;
+            text-align: center;
+        }
+        p::selection{
+            color: red;
+            background-color: green;
+            font-size: 30px;
+        }
+        ::selection{
+            color: green;
+            background-color: red;
+            font-size: 30px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Geeks For Geeks</h1>
+        <h2>::selection pseudo-element</h2>
+
+        <p>content in this paragraph turns red with green background on selection.</p>
+        <span>As this is not a paragraph,you can notice red background and green text on selection.
+     </span>
+    </body>
+   </html>
+
