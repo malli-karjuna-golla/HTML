@@ -1,0 +1,73 @@
+----------- Transform property ---------
+
+->The Transform property in CSS is used to change the coordinate space of the visual formatting model.
+->This is used to add effects like skew,rotate,translate,etc on elements.
+
+Syntax:
+
+transform:none|transform-functions|initial|inhert;
+
+Note:The transformations can be of 2-D or 3-D type.
+
+Values:
+
+*none:No transormation takes place.
+*matrix:(x,x,x,x,x,x):It specifies a matrix transformation of 2-D type.It takes 6 values.
+*matrix3d(x,x,x,x,x,x,x,x,x):It specifies a matrix transformtion of 3-D type.It takes 9 values.
+*translate(x,y):It Specifies a translation across the X and Y axes.
+*translate3d(x,y,z):It specifies a translation across the X,Y and Z axes.
+*translateX(x):It specifies the translation across the X-axis only.
+*translateY(y):It specifies the translation across the Y-axis only.
+*translateZ(z):It specifies the translation across the Z-axis only.
+*rotate(angle):It specifies the angle of the rotation.
+*roateX(angle):It specifies the rotation along with the X-axis corresponding to the angle of rotation.
+*rotateY(angle):It specifies the rotation along with the Y-axis corresponding to the angle of rotation.
+*rotateZ(angle):It specifies the rotation along with the Z-axis corresponding to the angle of rotation.
+*scale(x,y):It specifies the scale transformation along the X and Y axes.
+*scale3d(x,y,z):It specifies the scale transformation along the X,Y and Z axes.
+*scaleX(x):It specifies the scale transformation along the X-axis only.
+*scaleY(y):It specifies the scale transformation along the Y-axis only.
+*scaleZ(z):It specifies the scale transformation along the Z-axis only.
+*skew(x-angle,y-angle):It specifies the skew transformation along the X and Y axes.
+*skewX(x-angle):It specifies the skew transformation along the X-axis only. 
+*skewY(y-angle):It specifies the skew transformation along the Y-axis only.
+*skewZ(z-angle):It specifies the skew transformation along the Z-axis only.
+*perspective(x):It specifies the perspective of an element.
+perspective property:
+  *initial:it initializes the element to its default value.
+  *inherit:it inherits the perspective value from its parent element.
+
+  ------------ Transitions -------------
+
+  ->Transitions in CSS allows us to control the way in which transition takes place between the two states of the element.
+  ->Transition allows us to determine how the change in color takes place.
+  ->we can use the transistions to animate the changes, and make the changes visually appealing to the user.
+  ->There are four CSS properties which you should use,all or in part.
+
+  1.transition-property:THis property allows you to select the CSS properties which you want to animate during transition.
+  syntax:
+    transition-property:none | all | property | property1,property2,.....propertyN;
+  Values:
+   *none is used to specify that no property should be selected.
+   *all is used to specify all the properties to be selected,though not all properties are animate-able, only the the properties which are animate-able will be influenced.
+   *we can specify a single property or a set of comma separated properties propert1,property2,......propertyN. 
+   
+  2.transition-duration:This property allows you to determine how long it will take to complete the transition from one CSS property to the other.
+  syntax:
+    transition-duration:time;
+  Note:Here,time can be in seconds(s) or milliseconds(ms),you should use 's' or 'ms' after the number (without quotes).
+
+  3.transition-timing-function:This property allows you to determine the speed of change and the manner of change,during the transition.like, the change should be fast at the beginning and slow at the end,etc.
+  syntax:
+    transition-timing-function:ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | steps(int, start|end) | cubic-bezier(n,n,n,n);  
+ Note:There are other values which this transistion timing function can,take only the most frequent and simple are mentioned here.
+ 
+  4.transition-delay:This property allows you to determine the amount of time to wait before the transition actually starts to take place.
+  syntax:
+    transition-delay:time;
+
+  *The Shorthand property :
+   ->You can combine all the four transition properties mentioned above, into one single shorthand property.
+   syntax:
+     transition:(property name) | (duration) | (timing-function) | (delay);   
+

@@ -1,0 +1,176 @@
+<!--------Example1------>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Property</title>
+    <style>
+    .main {
+        display:grid;
+        padding:30px;
+        background-color:green;
+    }
+
+    .GFG {
+        text-align: center;
+        font-size: 35px;
+        background-color: white;
+        color: green;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="GFG">GeeksforGeeks</div>
+        </div>  
+    </body>
+</html>
+
+<!-------- Example2 -------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Property</title>
+    <style>
+    .main {
+        display:grid;
+        padding:30px;
+        background-color:green;
+    }
+
+    .GFG {
+        text-align: center;
+        font-size: 35px;
+        background-color: white;
+        color: green;
+        transform: matrix(1,0,-1,1,1,0);
+    }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="GFG">GeeksforGeeks</div>
+        </div>  
+    </body>
+</html>
+
+<!-------- Example3 -------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Property</title>
+    <style>
+    .main {
+        display:grid;
+        padding:30px;
+        background-color:green;
+        transform-style: preserve-3d;
+    }
+
+    .GFG {
+        text-align: center;
+        font-size: 35px;
+        background-color: white;
+        color: green;
+        transform-style: preserve-3d;
+        position: absolute;
+        transform: translate(150px,75%,5em) 
+    }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="GFG">GeeksforGeeks</div>
+        </div>  
+    </body>
+</html>
+
+<!-------- Example4 -------->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transform Property</title>
+    <style>
+    .main {
+        display:grid;
+        padding:30px;
+        background-color:green;
+    }
+
+    .GFG {
+        text-align: center;
+        font-size: 35px;
+        background-color: white;
+        color: green;
+        transform:rotate(45deg);
+    }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="GFG">GeeksforGeeks</div>
+        </div>  
+    </body>
+</html>
+
+<!-------- Example5 -------->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Transition</title>
+        <style>
+            h1 {
+                color: green;
+                text-align: center;
+            }
+            div.one{
+                height: 150px;
+                width: 150px;
+                border: 1px dashed black;
+                margin: 0 auto;
+                background: #FFEBEE;
+            }
+             div.one:hover {
+                height: 300px;
+                width: 300px;
+                background: #BBDEFB;
+             }
+        </style>
+        </head>
+        <body>
+            <h1>GeeksForGeeks</h1>
+        <div}class="one" >
+        </div>           }
+    </body>
+</html>
+
+<!-------- Example6 -------->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Transition</title>
+        <style>
+            h1 {
+                color: green;
+                text-align: center;
+            }
+            div.one{
+                height: 150px;
+                width: 150px;
+                border: 1px dashed black;
+                margin: 0 auto;
+                background: #FFEBEE;
+                transition:height 2s, width 2s, background 4s;
+            }
+             div.one:hover {
+                height: 300px;
+                width: 300px;
+                background: #BBDEFB;
+             }
+        </style>
+        </head>
+        <body>
+            <h1>GeeksForGeeks</h1>
+        <div}class="one" >
+        </div>           }
+    </body>
+</html>
