@@ -1,0 +1,59 @@
+-------------- Animations ----------------------
+
+CSS Animations:- 
+ ->It is a technique used to change the appearance and behaviour of various elements in web pages.
+ ->It is used to control the elements by changing their motionsor display.
+ ->It has two parts, one which contains the CSS properties which describe the animation of the elements and the other contains certain keyframes which indictes the animation properties of the element and the specific time intervals at which those have to occur.
+ 
+ The Keyframes Rule:-
+ ->Keyframes are the foundations with the help of which CSS animation works.
+ ->They define the display of the animation at the respective stages of its whole duration.
+
+Animation Properties:
+There are certain animation properties given below.
+
+*animation-name:- 
+It is used to specify the name of the @keyframes describing the animation.
+animation-name:animation_name:
+
+*animation-duration:-
+It is used to specify the time duration it takes animation to complete one cycle.
+
+*animation-timing-function:- 
+Specifies how the animation makes transitions through keyframes.It can have the following values.
+
+1.ease:The animation takes slowly,then fast, and then finally ends slowly.
+2.linear:The animation plays with the same speed from start to end.
+3.ease-in:The animation plays with the slow start.
+4.ease-out:The animation plays with a slow end.
+5.ease-in-out:The animation starts and ends slowly.
+
+animation-delay:- 
+It is used to specify the delay when the animation starts.
+
+animation-iteration-count:- 
+It is used to specify the number of times the animation will repeat.It can specify as infinite to repeat the animation indefinitely.
+
+animation-direction:- 
+Specifies the direction of the animation.It can have the following values:
+
+1.normal:The animation is played forward.This is the default value.
+2.reverse:The animation is played in the reverse direction i.e backward.
+3.alternate:The animation is played forward firsts, and then backward.
+4.alternate-reverse:The animation is played backward first, and then forwards.
+
+animation-fill-mode:- 
+Specifies what values are applied by the animation before and after it is executed.
+
+1.none:Animation will not apply any properties to the element before or after it is executed.This is the default value.
+2.forwards:The element will retain the same animation properties of the last keyframe aftr the animation completes.
+3.backwards:The element will get the properties of the first keyframe before the start of the animation.
+4.both:The animation will follow the rules for both forwards and backward.
+
+---------Shorthand code for animations-------- 
+ It is a shorthand way of implying the animation properties for a quicker code. The properties should be in the following order.
+
+ animation:[animation-name] 
+  [animation-duration] [animation-timing-function] [animation-delay]
+     [animation-iteration-count] {[animation-direction] [animation-fill-mode]
+ [animation-fill-state]  

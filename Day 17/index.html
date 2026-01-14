@@ -1,0 +1,209 @@
+<!-------Example1-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+     #gfg {
+       animation-name:color;
+       animation-duration:25s;
+       padding-top: 30px;
+       padding-bottom: 30px;
+       font-family: Times New Roman;
+    }
+    
+    #greeks {
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+        color: #090;
+        padding-bottom: 5px;
+    }}
+    #grreks1 {
+        font-size: 17px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    @keyframes color {
+        0%   {background-color: red;}
+        50%  {background-color: orange;}
+        100%  {background-color: brown;}
+    }
+        </style>
+    </head>
+    <body>
+        <div id="gfg">
+    <div id="geeks">GeeksforGeeks</div>
+    <div id="geeks1">A Computer Science Portal for Geeks</div>
+    </div>
+    </body>
+</html>
+
+<!-----Example2-->
+
+<html>
+    <head>
+        <style>
+            #gfg1 {
+                animation-name: text;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+
+            #geek1 {
+                font-size: 40px;
+                text-align: center;
+                font-weight: bold;
+                color: #090;
+                padding-bottom: 5px;
+            }
+            #geek2 {
+                font-size: 17px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            @keyframes text {
+                from {
+                    margin-top: 400px;
+                }
+                to {
+                    margin-top: 0px;
+                } 
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gfg1">
+            <div id="geek1">GeeksforGeeks</div>
+            <div id="geek2">A computer science portal for geeks</div>
+        </div>
+    </body>
+</html>
+
+<!-----Example3-->
+<html>
+    <head>
+        <style>
+            .geeks {
+                font-size: 40px;
+                text-align: center;
+                font-weight: bold;
+                color: #090;
+                padding-bottom: 5px;
+                font-family: Times New Roman;
+            }
+            .geeks1 {
+                font-size: 17px;
+                font-weight: bold;
+                text-align: center;
+                font-family: Times New Roman;
+            }
+            h2 {
+                width: 350px;
+                animation-name: text;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                background-color: rgb(225,210,85);
+            }
+
+            #one {
+                animation-timing-function: ease;
+            }
+
+            #two {
+                animation-timing-function: linear;
+            }
+            
+            #three {
+                animation-timing-function: ease-in;
+            }
+            
+            #four {
+                animation-timing-function: ease-out;
+            }
+            
+            #five {
+                animation-timing-function: ease-in-out;
+            }
+            
+            @keyframes text {
+                from {
+                    margin-left: 60p%;
+                }
+                to {
+                    margin-left: 0%;
+                }
+            }
+          </style>
+    </head>
+<body>
+    <div class="geeks">GeeksforGeeks</div>
+    <div class="geeks1">A computer science portal for geeks</div>
+    <h2 id="one">This text is ease.</h2>
+    <h2 id="two">This text is linear.</h2>
+    <h2 id="three">This text is ease-in.</h2>
+    <h2 id="four">This text is ease-out.</h2>
+    <h2 id="five">This text is ease-in-out.</h2>  
+</body>
+</html>
+
+<!-----Example4-->
+<html>
+<head>
+    <style>
+        .geeks {
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #090;
+            padding-bottom: 5px;
+            font-family: Times New Roman;
+        }
+        .geeks1 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            color: #090;
+            padding-bottom: 5px;
+            font-family: Times New Roman;
+        }
+
+        .geeks1 {
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center; 
+            font-family: Times New Roman;
+        }
+
+        #one {
+            animation-name:example;
+            animation-duration:10s;
+        }
+
+        #two {
+            animation-name:example;
+            animation-duration:10s;
+            animation-delay:10s;
+        }
+
+        @keyframes example {
+            from {
+                background-color: orange;
+            }
+            to {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="geeks">GeeksForGeeks</div>
+    <div class="geeks1">A computer science portal for geeks</div>
+    <h2 id="one">Text animation without delayed</h2>
+    <h2 id="two">Text animation with 10 second delay</h2>
+</body>
+</html>
