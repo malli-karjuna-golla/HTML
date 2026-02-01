@@ -1,0 +1,621 @@
+-------------- JavaScript variables--------------
+
+What is a variable?
+
+->A variable is a named placeholder that holds data or information.
+->In simpler terms,variables are used to store values that can be used and manipulated throughtout your code.
+->Think of variables as containers that hold different types of data, such as numbers,text,boolean values,or more complex data structures like arrays and objects.
+
+uses of variables?
+
+->Let's consider an e-commerce application where you need to add products to a wishlist or a cart.
+->JavaScript needs to store the information about these products to manange them effectively;
+->By storing data in variables, you can easily reference and manipulate that data later in your code.
+
+How to declare variables in JavaScript?
+
+->There are three main ways to declare variables in javascript:var,let, and const.
+->Each has it's own use case and scope rules.
+
+*Declaring variables with var 
+
+->The var keyword is used to declare a variable with var:
+ 
+Javascript 
+
+var message:
+message = "Hello, Geeks!";
+console.log(message); // Output: Hello, Geeks!
+output 
+Hello, Geeks!
+
+*Declaring variables with let
+
+->The let keyword is a more modern way to declare variables and is generally preferred over var due to its block-scoping feature.
+
+Javascript
+
+let text = "Javascript is the best!"
+console.log(text): // outputs: Javascript is the best!
+output
+Javascript is the best!
+
+*Declaring variables with const 
+
+->The const keyword is used to declare variables that are meant to be constants,meaning their values should not change once assigned.
+
+Javascript
+
+const number = 10;
+console.log(number): // Output: 10
+output
+10
+
+variable Assignments and Reassignments
+
+->Variables declared with var and let can be reassinged new values, while variables declared with const cannot.
+
+JavaScript 
+
+var message = "Hello, Geeks!";
+message = "Hello, GeeksForGeeks!";
+console.log(message); // Outputs: Hello GeeksforGeeks!
+
+Let text = "JavaScript is the best!";
+text = "JavaScript is awesome!";
+console.log(text); // Outputs: JavaScript is awesome!
+
+const number = 10;
+number = 20; // Error: Assignment to constamt variable
+output 
+Hello,GeeksForGeeks!
+JavaScript is awesome!
+
+Error: Assignment to constant variable
+
+Why use Let and Const over Var?
+
+*Block Scoping:
+->Let and const are block-scoped meaning they are only accessible within the block they are defined.
+->Var is function-Scoped, which can lead to unexpected behaviour.
+*Re-assignment:
+->const ensures that variables cannot be reassigned, which helps prevent accidental chnges to important values.
+
+------------- Variable Naming Convention ----------- 
+
+->naming variables is a crucial and often overlooked skill in programming.
+->A well-named variable can reveal whether the code was written by a beginner or an experienced developer.
+->In real-world projects,much time is spent modifying and extending code. 
+->This task becomes significantly easier when variable names are clear and descriptive.
+
+*Rules for naming Variables 
+
+Before we discuss how to come up with good variable names, let's review the rules for creating them:
+
+1.Characters Allowed: A variable name can consist of letters both(uppercase and lowercase),numbers, the dollar sign($), and the underscore(_).
+2.No leading numbers: A variable name cannot start with a number but can end with one.
+3.No special Characters: Avoid special characters like @,#,%,etc.
+
+JavaScript 
+
+Let username:
+Let age:
+Let _isValid:
+$pace:
+number1:
+number_2:
+
+->When a variable name consists of multiple words, you should not separate them with spaces, Instead, use camelcase or underscores.
+
+JavaScript
+
+Let userName; // camelCase
+Let user_age; // Underscore
+
+writing Good Variable Names 
+
+->Good variable names should describe the types of data stored in them. 
+->This practice enhances code readability and maintainability,especially in larger codebases.
+->Here are some tips for writing good variable names:
+ 1.Descriptive Names: The name should convey the variable's purpose or the type of data it holds.
+ 2.consistent Naming Convention:Follow a consistent naming convention, such as camelcase, for  easier readability.
+
+ practical Examples:
+
+JavaScript
+
+Let userName = "Prakash";
+console.log(userName); // outputs: Prakash
+
+The variable name username clearly indicates that it stores a user's name.Now, imagine If we named it x instaed:
+
+JavaScript
+
+Let x = "Prakash";
+console.log(x); // outputs: Prakash 
+
+variable Name Conventions 
+
+1.Single word Variables: use descriptive names for single-word variables.
+
+JavaScript
+Let score = 100;
+
+2.Multiple words Variables: Use camelcase or underscores.
+
+JavaScript
+Let homeaddress = "123 main St": // camelcase 
+Let home_address = "123 Main St": // using underscore 
+
+3.case Sensitivity: Remember that variable names are  case-sensitive.
+
+JavaScript
+Let userAge = 25;
+Let UserAge = 30; // Different variables 
+
+Avold unnecessary symbols 
+
+while $ and - are allowed , avold using them unnecessarily as they can make the code look clottered  and unprofessional.only use these symbols if they enhance the clarity of your code. 
+
+JavaScript
+Let $price = 100;
+Let -isvalid = true;
+
+------------ Summary ------------
+
+->In Summary, good variable names are essential for writing clean,readable, and maintainable code.
+->Follow these guidelines to improve variable naming skills:
+
+1.Use descriptive names that convey the variable's purpose.
+2.follow a consistent naming convention naming convention,such as camelcase.
+3.Avold starting variable names with numbers.
+4.Avold unnecessary symbols like $ and -.
+
+------------ Data types ------------
+
+->JavaScript is a powerful and flexible language used for both Client-side and server-side programming.
+->One of the key concepts in JavaScript is the use of data types.
+
+What are Data types? 
+
+->In programming, data types refers to the kind of value a variable can hold.
+->In JavaScript, data types are broadly classified into two groups:
+  *Primitive Data types
+ *Non-Primitive Data types
+
+1. Strings:
+->A String is a data type used to represent texual data.
+->A String is any set of characters enclosed in quotes, either single(' ') or double(" ") or even backticks(` `).
+
+JavaScript
+
+Let username = "Prakash";
+console.log(username); // outputs: Prakash
+
+output
+Prakash
+
+Note: If you omit the quotes, JavaScript will treat the text as a variable name, which will cause an error if the variable is not defined.
+
+2.Numbers:
+->The number data type is used to declare a numeric values.
+->In JavaScript, numbers can be integers or floating-point values.
+
+JavaScript
+
+Let age = 25;
+console.log(typeof age); // outputs: number
+
+Let price = 19.99;
+console.log(typeof price); // outputs: number
+
+output
+number
+number
+
+Note:If you enclose numbers in quotes, they become strings.
+
+3.Booleans:
+->A Boolean data type has only two possible values:True or False.
+->It is tyically used to perform conditional,checks or represent binary states, such as whether a product is in a shopping cart or not.
+
+JavaScript
+
+Let is product in cart = true;
+console.log(typeof isProductInCart); // outputs: boolean
+
+output
+boolean
+
+Note: 1.A Boolean can be checked using conditional statements like if-else.
+      2. If you try to use "true" or "false" (with quotes), they will be treated as strings, not booleans.
+
+4.undefined:
+->The undefined data type is used  when a variable is declared but not yet assined a value.
+->JavaScript automatically assigns the value undefined to such variables.
+
+JavaScript
+
+Let username;
+console.log(type of username); // outputs: undefined
+console.log(username); // outputs: undefined
+
+output
+undefined
+undefined
+
+5.null:
+->The Null Data Type is used to represent the intentional absence of any value.
+->It is explicitly set to indicate that variable should have no value.
+
+JavaScript
+
+Let user= null;
+console.log(user); // outputs: null
+console.log(type of user); // outputs: object
+
+output
+null
+object
+
+6.Objects:
+->An Object is a non- primitive data type used to store collections of data. 
+->Objects can hold multiple values as key-value pairs.
+->You can create an object using curly braces {}.
+
+JavaScript
+
+const person = {
+   name: "Prakash",
+   age: 25,
+   education: "Engineer"
+};
+console.log(typeof person); // outputs: object
+
+output
+object 
+
+7.Arrays:
+->An array is a special type of object used to store ordered collections of values.
+->Arrays are defined using square brackets [].
+
+JavaScript
+
+const fruits = ["Apple", "Banana", "Orange"];
+console.log(typeof fruits); // outputs: object
+
+output
+object  
+
+------------ Summary ------------
+Here are the primary data types we discussed:
+
+1.String:Text enclosed in quotes.
+2.Number:Integers or floating-point numbers.
+3.Boolean:True or False values.
+4.undefined:Variables declared but not assigned a value.
+5.null:Represents "No value". 
+6.Object:Non-primitive type for storing collections of data. 
+7.Array:A special type of object for storing list of values.
+
+------- Concatenation and Template ----------- 
+
+* String Concatenation:
+   ->String Concatenation is the process of joining two or more Strings together using the + operator.
+   ->This method has been around since the early days of JavaScript.
+
+Example
+Suppose we have two variables, username and age, and we want to create a message that includes these variables:
+
+JavaScript
+let username = "Vinod";
+let age = 22;
+let message = my name is " + username + " and I am " + age + " years old.";
+console.log(message); // outputs: my name is Vinod and I am 22 years old.
+
+* Template Literals:
+    ->Template Literals provide a more readable and convenient way to include variables in Srtings.
+    ->They are enclosed by backtics ['] and allow embedded expressions using ${}.
+
+Example
+We can achieve the same result as above using template literals.
+
+JavaScript
+let username = "Prakash";
+let age = 25;
+let message = `My name is ${username} and I am ${age} years old.
+console.log(message);
+
+// outputs: My name is Prakash and I am 25 years old.
+
+   Advantages of template Literals
+
+1.Readability: Template Literals improve the readability of your code by avolding the clutter of multiple + operators.
+2.Multiline Strings:Template Literals  allow for multiline strings without the need for escape sequences.
+
+multiple Example:
+
+JavaScript
+
+Let username ="Jeevan"
+Let age =22;
+Let multilineMessage ='My name is $(username).
+I am $(age) years old.
+I Love to code, eat and sing.';
+console.log(multilineMessage);
+
+output:
+My name is Jeevan.
+Iam 22 Years old.
+I love to code, eat and sing.
+
+Practice Exercise 
+
+JavaScript
+
+Let hubby="Reading"
+Let concatenationMessage ="My favourite h0bby is " + hobby + ".";
+Let templateLiteral Message ='My favourite hobby is $(hobby).';
+console.log(concatenationMessage);
+console.log(templateLiteralmessage);
+
+Output
+my favorite hobby is Reading.
+My favorite hobby is Reading.
+
+JavaScript
+
+Let subject = "English"
+Let concatenationMessage = "Iam good in " + subject + ".";
+Let templateLiteralmessage = 'Iam good in $(subject).';
+console.log(concentationmessage);
+console.log(templateLiteralMessage);
+
+output:
+Iam good in English.
+Iam good in English.
+
+-------- Arithmetic Operators --------- 
+->Mathematical operations i JavaScript are similar to those in other programming languages.
+->However, JavaScript behaves differently when applying mathematical operators to Strings.
+
+* Basic mathematical operations 
+->We can perform basic arithematic operations such as addition,subtraction,multiplication,finding remainders, and exponentation
+
+Example:
+Let's start with two variables:
+
+JavaScript
+const x =12;
+const y =3;
+
+// Addition
+console.log(x + y); // outputs: 15
+
+// Subtraction
+console.log(x - y); // outputs: 9
+
+// Multiplication
+console.log(x * y); // outputs: 36
+
+// Division
+console.log(x / y); // outputs: 4
+
+// Remainder
+console.log(x % y); // outputs: 0 
+
+// Exponentiation
+console.log(x ** 2); // outputs: 144
+console.log(y ** 3); // outputs: 27
+
+output:
+15
+9
+36
+4
+0
+144
+27
+
+* Type conversions with Operators 
+->JavaScript automatically handles type conversion in many cases.
+
+1.Adding Strings and Numbers 
+->When  adding a string and a number, JavaScript treats the number as a string and concatenates them.
+
+JavaScript
+const x = "12";
+const y = "3";
+console.log(x + y); // outputs: 123
+
+output:
+123
+
+2.Other operations with Strings and Numbers for subtraction, multiplication, and division, JavaScript converts Strings to numbers if possible.
+
+JavaScript
+console.log(x - y); // outputs: 9
+console.log(x * y); // outputs: 36
+console.log(x / y); // outputs: 4
+
+3.Mixing Types 
+->When one operand is a number and the other is a String:
+
+JavaScript
+const x = 12;
+const y = "3";
+console.log(x + y); // outputs: 123
+console.log(x - y); // outputs: 9
+console.log(x * y); // outputs: 36 
+console.log(x / y); // outputs: 4
+
+output:
+123  
+9
+36
+4
+
+4.Handling Non-Numeric Strings 
+->If the Srting cannot be converted to number, JavaScript returns NaN (Not a Number)
+
+JavaScript
+const x = "apple";
+const y = "mango"
+console.log(x + y) ; // outputs: applemango
+console.log(x - y); // outputs: NaN
+console.log(x * y); // outputs: NaN
+console.log(x / y); // outputs: NaN
+
+output:
+applemango
+NaN
+NaN
+NaN
+
+----------- Type Conversion -----------
+->Type conversion is an essential concept in JavaScript that allows us to convert one data type into another.
+->This is particularly useful in situations where data from an HTML input or text area needs to be manipulated as a different type, such as converting a String to a number.
+
+* Why use Type conversions?
+->Consider an HTML text area that always provides data as a String.
+->If the user enters a number, you might need this number to be treated as a numeric value for calculations.
+
+* Conerting Strings to Numbers 
+->Lets starts with an example of converting Strings to numbers.
+->Suppose you have two variables string numbers as Strings:
+
+JavaScript
+const a = "3";
+const b = "10";
+
+Note: If you try to add these Strings directly, JavaScript will concatenate them, resulting in "310" instead of the nuimeric sum 13.
+
+JavaScript 
+console.log(a + b); // outputs: 310
+
+To achieve the desired numeric addition, you need to convert these Strings to numbers using the number function.
+
+JavaScript
+const aNumber = Number(a);
+const bNumber = Number(b);
+console.log(aNumber + bNumber); // outputs: 13
+
+Example with Type Checking 
+
+Here's an example of converting numbers to Srtings and their types:
+
+JavaScript
+const num1 = 123;
+const num2 = 456.78;
+const str1 = String(num1);
+const str2 = String(num2);
+
+console.log(type of num1); // outputs: number
+console.log(type of num2); // outputs: number
+console.log(type of str1); // outputs: string
+console.log(type of str2); // outputs: string
+
+output:
+number  
+number
+string
+String
+->Initially, num1 and num2 are numbers. after conversion, str1 and str2 are strings.
+
+* Converting to Boolean
+
+->Boolean conversion is another useful type conversion.
+-This is done using the Boolean function, which converts values to true or false.
+
+Conversion Rules
+  1.Any non empty String is true.
+  2.An empty String is false.
+  3.The number 0 is false.
+  4.Any other number is true.
+
+  Example with Strings
+
+JavaScript
+const str1 = "Hello";
+const str2 = "";
+console.log(Boolean(str1)); // outputs: true
+console.log(Boolean(str2)); // outputs: false
+
+output:
+true
+false
+
+Example with Numbers
+
+JavaScript
+const num1 = 42;
+const num2 = 0;
+console.log(Boolean(num1)); // outputs: true
+console.log(Boolean(num2)); // outputs: false
+
+output:
+true
+false
+
+Example1:Converting User Input from Text Area 
+
+JavaScript
+const input = "42";
+const number = Number(input);
+
+ if (!isNaN(number)) {
+   console.log(number + 8); // outputs: 50
+} else {
+   console.log("Invalid input"); 
+   }
+
+output:
+50
+
+Example2:checking Boolean values 
+
+JavaScript
+console.log(Boolean("Prakash")); // outputs: true
+console.log(Boolean("")); // outputs: false
+console.log(Boolean(100)); // outputs: true 
+console.log(Boolean(0)); // outputs: false
+
+output:
+true
+false
+true
+false
+
+------------ Readlinesyc ------------
+->ReadlineSyc is a JavaScript (Node.js) library that allows developers to take user input from the terminal in a synchronous way.
+->It is commonly used in command-line based JavaScript programs where the programs need to pause and wait for user input.
+
+1.Set Up readline-syc:
+
+JavaScript
+const readlineSync = require('readline-sync');
+
+2.Ask for User input:
+
+JavaScript
+const UserName = readlineSync.question('May I know your name? ');
+console.log(`Welcome, ${UserName}!`);
+
+3.convert and Use Numeric Input: 
+
+Let's extend this to ask the user for thier age and calculate thier birth year.
+
+JavaScript
+const userAge = readlineSync.question('May I Know your age? ');
+
+// Convert the input to a number
+const userAgeNumber = Number(userAge);
+
+// check if the conversion was successful 
+if (!isNaN(userAgeNumber)) {
+   const currentYear = new Date().getFullYear();
+   const birthYear = currentYear - userAgeNumber;
+   console.log(`You were born in the year ${birthYear}.`);
+} else {
+   console.log('Please enter a valid number for age.');
+}
