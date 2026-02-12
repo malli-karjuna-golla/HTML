@@ -1,0 +1,438 @@
+---------------- JavaScript Comparision ------------ 
+
+->In JavaScript, comparision operators are used to compare two values, returning a Boolean value (true or false).
+->These operators are fundamental in conditional statements, loops, and logical expressions.
+->Understanding how they work, including some of JavaScript's unique behaviour and quicks, can help you avoid common mistakes and unexpected results in your code.
+
+1.Basic Comparision Operators:-
+ ->Basic comparision operators compare two values and return a Boolean based on the condition being met.
+ ->The following are the basic comparision operators in JavaScript:
+      * Greater Than (>)
+      * Lesser Than  (<)
+      * Greater Than or Equal (>=)
+      *Lesser Than or Equal (<=)
+      
+Example 
+
+JavaScript 
+
+console.log(50 > 30);
+console.log(50 < 30); 
+console.log(30>=30);
+console.log(50<=40);
+console.log(50==40);
+
+output:-
+
+true
+False
+true
+false 
+false 
+
+2.Comparision of Strings:-
+ ->In JavaScript strings are compared based on their ASCII (unicode) values.
+ ->When comparing two strings, JavaScript checks thier characters from left to right, comparing the ASCII values of each character.
+
+JavaScript 
+
+console.log("apple" > "banana");
+console.log("glowing" > "glow");
+
+output:- 
+
+false 
+True
+
+3.Type Coercian in Comparision:- 
+ ->JavaScript performs type coercian in certain comparisions, meaning it automatically converts one data type to another.
+ ->This can lead to unexpected results, especially when comparing Strings and numbers.
+
+ JavaScript 
+
+ console.log("2" > 1);
+ console.log("01"==1);
+ 
+ output:- 
+ 
+ true 
+ true 
+ 
+ 4.Strict Equality (===) vs.Loose Equality (==):- 
+    *Loose Equality (==): converts the values before comparing them.
+    *Strict Equality (===): Checks both the value and the type.
+    
+JavaScript 
+
+console.log("01"===1);
+
+output:- 
+
+false 
+
+Note:In general, It's advisable to use strict equality (===) to prevent unintentional type coercion that can lead to bugs.
+
+5.Null and Undefined in Comparision:- 
+ ->JavaScript has special rules when comparing null and undefined. While they are loosely equal (==), they are not strictly equal (===), they are not strictly equal.
+
+ JavaScript
+
+ console.log(null == undefined); 
+ console.log(null === undefined);
+
+ output:- 
+
+ true 
+ false 
+
+ 6.Null in Mathematical Comparisions:- 
+  ->Null has unique behaviour when used in mathematical comparisions (such as <. >, <=, >=).
+  ->In these comparisions, null is treated as 0.
+
+  javaScript
+
+  console.log(null > 0);
+  console.log(null < 1);
+  console.log(null >= 0);
+  console.log(null == 0);
+  
+  output:- 
+  
+  false
+  true
+  true 
+  false 
+  
+  Examples and Exercise:
+  
+  JavaScript
+
+  console.log(3 <= 5);
+  console.log("mango" > "banana");
+  console.log("2" > "3");
+  console.log(undefined == null);
+  console.log(null === undefined);
+  console.log(null < 1);
+
+  output:- 
+
+  true
+  true
+  false
+  true
+  false
+  true
+
+  Key Points:- 
+   
+  *Always use === instead of == to avold issues with type coercian.
+  *String Comparisions are done based on AsCII (Unicode) values.
+  *JavaScript automatically converts strings to numbers in numerical comparisions.
+  *Null behaves differently in mathematical and equality comparisions.
+  *undefined always results in false.
+
+  -------------- JavaScript Conditional Statements ----------- 
+
+->A conditional statement that allows the program to execute certain code based on a condition being true or false.
+->conditional statements are a crucial part of any application, and in JavaScript , they are written using keywords like if, else. and else if.
+
+1.If Statement:
+  ->The If statement evaluates a condition, and if the condition is true, it executes the code inside the curly braces {}.
+  ->If the condition is false, it does nothing unless paired with an else or else if statement.
+  Syntax:
+   if (condition) {
+    // code to be executed if the condition is true 
+    }
+
+Example:
+
+JavaScript
+
+ const isLoggedin = true:
+ if (isLoggedin) {
+    console.log(You are Logged in.");
+ }
+
+ output:
+ You are loggedin 
+
+ 2.The else Statement:
+   ->An else Statement is used to run a block of code when the condition in the if statement evalautes to false.
+  Syntax:
+   if (condition) {
+    // code to be executed if the condition is true 
+   } else {
+    // code to be executed if the condition is false
+   }
+
+Example:
+
+JavaScript 
+
+ const userage = 15;
+
+ if (userAge > 16) {
+    console.log("You are an adult.");
+ } else {
+    console.log("You are not an adult.");
+ }
+
+ output:
+  You are not an adult.
+
+3.The else if Statement:
+  ->In case you need to check multiple conditions, you can use the else if statement.
+  ->This allows you to check additional conditions if the first if condition fails.
+   Synatax:
+
+  if (conditional) {
+    // code to be executed if condition1 is true 
+  } else if (condition2) {
+    // code to be executed if condition2 is true
+  } else {
+    // code to be executed if none of the above conditions are true 
+  }
+
+  Example:
+
+  JavaScript
+   
+  const userAge =30;
+  
+  if (userAge < 18) {
+    console.log("You are a minor.");
+  } 
+    else if (userAge >= 18 && userAge < 60)
+  {
+    console.log("You are an Adult.");
+  } 
+    else {
+    console.log("You are a senior.");
+  }  
+  
+  output:
+  You are an adult.
+
+  *Using Logical Operators
+  ->JavaScript supports logical operators like AND (&&) and OR(//), and how to combine multiple conditions in JavaScript.
+  ->We'll also dive into using the readline-sync module to handle user input for checking conditions dynamically.
+
+   1.The AND Operator (&&):-
+   
+  ->The AND operator (&&) is used when you want to check if both conditons are true.
+  ->If both conditions are true, the entire expression evaluates to true.
+
+  Example:
+
+  JavaScript 
+
+  const readlinesync = require("readline-sync");
+  const number = Number(readlinesync.question("Enter a number:"));
+  const remainderAfterDivisionByThree = number % 3;
+  const remainderAfterDivisionByFive  = number % 5;
+  if (remainderAfterDivisionByThree === 0 && remainderAfterdivisionByFive === 0) {
+    console.log("Fizz");
+  } else {
+    console.log("The number is not divisible by both 3 and 5.");
+  }
+
+  output:
+  Enter a number : 15
+  Fizz
+
+   2.The OR operator (//):
+    
+  ->The OR operator (//) is used when you want to check if either of the conditions is true.
+  ->If atleast one condition is true, the expression evaluates to true.
+  
+  Example:
+
+  JavaScript 
+
+  const readlinesync = require("readline-sync");
+  const number = Number(readlinesync.question("Enter a number:"));
+  const remainderAfterDivisionByThree = number % 3;
+  const remainderAfterDivisionByFive  = number % 5;
+  if (remainderAfterDivisionByThree === 0 // remainderAfterdivisionByFive === 0) {
+    console.log("buzz");
+  } else {
+    console.log("The number is not divisible by 3 or 5.");
+  }
+
+  output:
+  Enter a number: 10
+  buzz
+  
+    3.Combining Mutiple Conditions 
+
+  ->You can combine multiple conditions using AND (&&) and OR (//) to create more complex decision-making scenarios.
+
+  Example:
+
+  JavaScript 
+
+  const readlinesync = require("readline-sync");
+  const number = Number(readlinesync.question("Enter a number:"));
+  const remainderAfterDivisionByThree = number % 3;
+  const remainderAfterDivisionByFive  = number % 5;
+  const remainderAfterDivisionBySeven = number % 7;
+  if (remainderAfterDivisionByThree === 0 && remainderAfterdivisionByFive === 0) {
+    console.log("Fizz");
+  } else {
+    console.log("Not divisible by both 3 and 5.");
+  } 
+  if (reaminderAfterDivisionByThree === 0 // remainderAfterDivisionByFive === 0) {
+    console.log("Buzz");
+  } else {
+    console.log("Not divisible by 3 or 5");
+  }
+  if (remainderAfterDivisionBySeven === 0) {
+    console.log("BuzzBuzz");
+  } else {
+    console.log("Not divisible by 3, 5, and 7");
+  } 
+  
+  output:
+  Enter a number: 105
+  Fizz
+  buzz
+  BuzzBuzz
+
+  ------------------ JavaScript Ternary Operator ----------------
+
+   ->Terinary operators offer a compact way to write conditional expressions in JavaScript.
+   ->They can be used as a shorthand for if-else statements, making your code more concise and readable.
+
+    * Understanding Terinary Operators
+     ->A terinary operator is a one-liner shorthand for if-else statements.
+     ->It uses the syntax: condition ? expressionIfTrue : expressionIfFalse.
+     
+    * Condition     : A statement that returns true or false ?
+    * value if True : what happens if the condition is true ?
+    * value if false: what happens if the condition is false ?
+
+  Example:
+
+  JavaScript
+
+  const totalmarks = 60;
+  if (totalMarks < 40) {
+    console.log("You need to work hard.");
+  } else {
+    console.log("You cleared the exam.");
+  }
+  
+  output:
+  You clered the exam.
+
+  converting to a Ternary Operator 
+  The same logic can be written using a ternary operator:
+
+  JavaScript 
+   
+  const totalmarks = 60;
+  console.log(totalmarks < 40 ? "You need to work hard." : "You cleared the exam.");
+
+  output:
+  You cleared the exam.
+
+  ---------------- Nested Ternary Operatorss ------------- 
+
+  ->You can also use nested ternary operators, but be cautious as it can make the code harder to read:
+
+  JavaScript 
+
+    const score = 85;
+    const grade = score > 90 ? 'A':
+                score > 80 ? 'B':
+                score > 70 ? 'C':
+                score > 60 ? 'D': 'F':
+
+    console.log('Your grade is :$(grade)');
+    
+    output:
+    Your grade is :B 
+
+  Example: Using Ternary Operators to Replace if-else Statements:
+  
+  JavaScript 
+
+  const totalMarks = 60;
+
+  if (total Marks < 40) {
+    console.log("You need to work hard.");
+  } else if (totalMarks < 60) {
+    console.log("B grade");
+  } else if (totalMarks < 75) {
+    console.log("A grade");
+  } else if (totalmarks < 85) {
+    console.log("A+ grade");
+  } else {
+    console.log("Genius");  
+  }
+
+  output:
+   A grade 
+
+   converting to Ternary Operators 
+    we can achieve the same logic using a single line of code with ternary operators:
+
+   JavaScript 
+   
+     const totalMarks = 60;
+
+     const result = totalMarks < 40 ? "You need to work hard." : totalMarks < 60 ? "B grade" :
+                                                               : totalMarks < 75 ? "A grade" :
+                                                               : totalMarks < 85 ? "A+ grade":"Genius";
+     console.log(result);
+     
+     output:
+     A grade 
+
+    * Advantages :-
+     
+     1. Conciseness: Ternary operators make the code shorter.
+     2. Readability: For simple conditions, terninary operators can make the code to easier to read.
+     3. Single-Line expressions: Ternary operators are useful for inline assignments. 
+
+    * DrawBacks :-
+    
+     1.Complexity: For multiple or nested conditions, ternary operators can become hard to read and maintain.
+     2.Debugging : Debugging nested ternary operators can be more challenging compared to if-else statements.
+
+     
+                                                               
+  }
+
+  }
+  }
+
+
+
+  }
+
+
+  
+
+    }
+  } 
+
+  }
+  }
+  }
+  } 
+ }
+ }
+   }
+   }
+ }
+
+} 
+  
+  )
+
+
+
+
+
+)
