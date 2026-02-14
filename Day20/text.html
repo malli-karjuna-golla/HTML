@@ -1,0 +1,379 @@
+--------------------- Logical Operators Part 1 -------------- 
+
+->Logical operators in JavaScript are used to combine multiple conditions and return a Boolean value based on the evaluation of those conditions.
+->They are four main Logical operators:
+  1.AND (&&) 
+  2.OR  (//)
+  3.NOT (!)
+  4.Nullish Coalescing (??)
+
+1.AND (&&) Operator:- 
+ The AND operator returns true if all the conditions are true; otherwise it returns false. 
+ 
+ Example:
+
+ JavaScript 
+
+ const physics = 90;
+ const maths   = 95;
+ const chemistry = 88;
+ const biology = 96;
+
+ if physics > 85 && maths > 85 && chemistry > 85 {
+    console.log("You are eligible for engineering.");
+ } else {
+    console.log("Ypu are not eligible for engineering.");
+ }
+
+ output:
+ You are eligible for engineering.
+
+2.OR (//) Operator:- 
+ The OR operator returns true if atleast one of the condition is true; otherwise, it returns false.
+ 
+Example:
+
+JavaScript 
+
+const physics = 90;
+const maths = 95;
+const chemistry = 88;
+const biology = 96;
+if (physics > 90 // maths > 85 // chemistry > 89) {
+    console.log("You are eligible for engineering");
+} else {
+    console.log("You are not eligible for engineering"); 
+}
+
+output:
+You are eligible for engineering.
+
+3.Not (!) Operator:- 
+ ->The NOT operator reverses the Boolean value of the operand.
+ ->If the operand ie true, it returns false, and if the operand is false, it returns true.
+
+ Example 
+
+ JavaScript 
+
+  const isStudentEligible = false;
+ if (!isStudentEligible) {
+    console.log("You are not eligible.");
+ } else {
+    console.log("You are eligible.");
+ }
+
+ output:
+ You are not eligible.
+4.Nullish Coalescing:
+ ->In JavaScript, nullish coalescing is a new type of logical operator that was introduced to help simplify handling undefined and null values.
+ ->This operator can help prevent pitfalls that might occur when working with values like undefined, null, 0, or an empty string.
+
+ * What is Nullish Coalescing (??)?
+  ->The nullish coalescing operator (??) is used to assign a default value to a variable when the value is either null or undefined.
+  ->This is particularly useful when you want to provide a fullback value only for null or undefined.
+  ->But you want to keep values like 0 or an empty string ("") intact.
+   Syntax:
+   Let result = value ?? defaultvalue:
+
+Example:
+
+JavaScript
+
+ const firstName = "Prakash";
+ console.log(firstName ?? "Hidden Geek");
+
+ output:
+ "Prakash"
+
+ JavaScript 
+
+ Let firstName: // 'firstName' is undefined 
+ console.log(firstname ?? "Hidden Geek") 
+
+ output:
+ "Hidden Geek"
+
+ * Case of Empty String:
+
+ ->Nullish coalescing does not treat an empty string ("") as a falsy value.
+ ->This is different from OR (//) operator which would consider an empty String as falsy.
+
+ JavaScript 
+
+ Let firstName = "";
+ console.log(firstName ?? "Hidden Geek");
+
+ output:""
+
+ * Difference Between ?? and //
+
+ OR Operator:
+ ->The OR operator returns the first truthy value in an expression.
+ ->It will treat values like 0, ""(empty string), null, and undefined as falsy values.
+
+ JavaScript 
+
+ Let firstName = "";
+ console.log(firstName // "Hidden Geek");
+
+ output:
+ "Hidden Geek"
+
+ Nullish Coalescing (??) Operator:
+
+ ->The nullish coalescing operator will only return the fallback value if the variable is null or undefined.
+ ->It will not return the fallback value for falsy values like 0 or "". 
+ 
+ JavaScript 
+
+ Let firstName ="";
+ console.log("FirtName ?? "Hidden Geek");
+
+ output:""
+
+ ---------------------- JavaScript Loops --------------- 
+
+ ->Loops are fundamental constructs in programming that allow us to execute a block of code repeatedly.
+ ->JavaScript provides several types of loops, each with its unique use cases use cases and syntax.
+ ->In this article, you will have a solid understanding of how to use these loops effectively in your Javascript code. 
+
+ 1.For Loop :-
+  ->The for loop is one of the most commonly used loops in JavaScript.
+  ->It provides a concise way to iterate over a range of values and is often preferred over the while loop due to it's compact syntax.
+  
+  syntax:
+     
+    For (initialization; condition;increment) {
+        // code to be executed to each iteration
+    }
+
+ * Intialization: This statement is executed once before the loop starts.
+   It typically initializes a counter variable.
+   
+ * Condition: This expression is evaluated before each iteration. 
+  If the condition is true, the loop continues; if false, the loop stops.
+  
+ * Increment: This statement is executed after each iteration. It usually increments the counter variable
+
+ Example: Printing "Hello" 10 times
+
+ JavaScript 
+
+ var i;
+ for (i=0; i<10;i++)
+{
+    console.log("Hello World!");
+}
+
+output:
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+
+2.While Loop :-
+
+ ->A While loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition.
+ ->The While loop can be thought of as a repeating if statement.
+
+ syntax:
+
+  while (boolean condition)
+  {
+    Loop statements...
+  }
+
+  Example 
+
+  JavaScript 
+  
+   var i=1;
+   while(i <=10)
+   {
+    console.log("Hello world!");
+    i++;
+   }
+
+Output:
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+
+3.D0-While Loop
+
+->Do-while loop is similar to to the while loop, but it gurantees that the code inside the loop is executed at least once, even if the condition is false.
+
+syntax:
+
+ do 
+ {
+    statements.. 
+ }
+    while (condition);
+
+ Example:
+
+ Javascript 
+
+ Let i=0;
+
+ do {
+    console.log(i);
+     i++;
+    } while (i<10);
+
+output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Note:The Key difference between the while loop and the do-while loop is that the do while loop will execute the code inside the loop at least once, even if the condition is  intially false.
+
+-------------- Functions In JavaScript ------------ 
+
+->A function is a set of statements that take inputs, do some specific computation, and produces output.
+->Basically, a function is a set of statements that perform some tasks or computations and returns the results to the user.
+->The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code again and again for different inputs, we can call the finction itself.
+->Like, other programming languages, JavaScript also supports the use of functions.
+->alert(), this is a built-in function in JavaScript.
+->We can create functions in JavaScript using the keyword function.
+ syntax:- 
+   function functionName(Parameter1,Parameter2,..)
+    {
+      // Function body
+    }
+
+->To create a function in JavaScript, we have to first use the keyword function,separated by name of function and Parameters within parenthesis.
+->The part of function inside curly braces{} is the body of function.
+
+Rules for creating a function:
+  *Every function should begin with the keyword function followed by.
+  *A user defined function name which should be unique.
+  *A list of parameters enclosed within parenthesis and separated by commas.
+  *A list of statement composing the body of the function enclosed within curly braces {}. 
+
+Example:
+
+JavaScript
+
+ function calcAddition(number1,number2)
+ {
+   return munber1 + number2;
+ }
+
+Function parameters:
+  ->Parameters are additional infomation passed to a function.
+  ->The parameters are passed to the function within parenthesis after the function name and separated by commas.
+  ->A function in JavaScript can have any number of parameters and also at the same time a function in JavaScript can not have a single parameter.
+Calling Functions:
+  ->After defining a function, the next step is to call them to make use of the function.
+  ->We can call a function by using the function name separated by the value of parameters enclosed between parenthesis and a semicolon at the end.
+ syntax:
+  functionName( Value1, Value2,..);
+
+ JavaScript 
+ 
+  function welcomeMsg(name) {
+    console.log("Hello" + name +"welcome to GeeksforGeeks");
+  }
+   // creating a variable 
+   var nameVal ="Admin";
+
+   // calling the function
+   welcomeMsg(nameVal);
+
+ output:
+ Hello Admin welcome to GeeksforGeeks
+ 
+ Return Statement:
+  ->There are some situations when we want to return some values from a function after performing some operations.
+  ->In such cases, we can make use of the return statement in JavaScript.
+  ->This is an optional statement and most of the times the last statement in a JavaScript function.
+  ->The return statement begins with the keyword return separated by the value which we want to return from it.
+  syntax:
+   return value:
+
+---------- Function declaration and types of functions in JS ----------------- 
+
+->A function is basically a user-defined structure of code which we can use of any number of types by just calling it's entity.
+->We can give any name to our defined functions and also pass any number of parameters to the function, even a non-parameterised function can also be valid.
+ syntax:
+   Function functionName() {
+      //body
+   }
+
+->The parameters are values which is passed to the function which can be used to take values to the functions.
+->The Arguments are the values which can be used to pass the values to function from the calling part of the function
+ syntax:
+   function FunctionName(Name) {
+
+      // body
+   } 
+->This is the given function which would be used to take the parameters of the key name.
+
+JavaScript 
+  
+function Print(nmae) {
+   console.log(name);
+}
+Print("GeeksforGeeks");
+Print("Anupam Gupta");
+
+output:
+GeeksforGeeks
+Anupam Gupta
+
+The function set of JS also contains a type of functions as:
+
+Anonymous Functions:
+
+->The anonymous functions are basically the functions which can be passed to a variable without having it's own identity.
+->The AnonymousFunction is used to have the properties of the assigned function and it can also be called as the similar function like AnonumousFunction()
+ syntax:
+Let AnonymousFunction = Function{} {
+
+   // body
+
+}}
+
+
+
+
+
+
+ }
+
+ }
+
+
+ }
+
+
+
+
+
+
+
+
+}
