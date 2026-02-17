@@ -1,0 +1,262 @@
+---------------- Anonymous Functions ------------- 
+->Anonymous functions in JavaScript are functions without a name or identity.
+->They are often used when a function is only needed once or as an argument to other functions.
+-An anonymous function is simply a function that does not have a name.
+->This can be useful in various scenarios, such as callbacks, event handlers, or immediately invoked function expressions (IIFE).
+  syntax:
+  
+  JavaScript
+
+  Let anonymousFunction = function()
+  {
+    console.log("Hello from GeeksforGeeks");
+  }
+
+  output:
+  Hello from GeeksforGeeks
+
+ *Function Expression:- 
+ ->When you assign an anonymous function to a variable,it is known as a function expression.
+ ->This makes the variable a function, not just a simple variable.
+
+JavaScript 
+
+Let greet = function() {
+   console.log("Hello from GeeksforGeeks!");
+};
+
+greet():// output: Hello from GeeksforGeeks!
+
+*Type of Anonymous Function:
+->To confirm that the variable holding the anonymous function is indeed a function, you can use the type of operator:
+     console.log(typeof greet); //
+     output: function
+
+*Named Function Expressions:- 
+ ->A named function expression is an anonymous function with a name.
+ ->This name is local to the function's scope and can be useful for recursion or debugging.
+
+ JavaScript
+
+ Let greet = function 
+  greetMessage() {
+    console.log("Hello from GeeksforGeeks!");
+  }
+
+  greet(): // output: Hello from GeeksforGeeks!
+
+*Calling the Named Function:- 
+ ->While you can call the named function using the variable it is assigned to, trying to call the function by it's name outside of its scope will result in an error.
+      greetMessage(); // Error:
+      greetMessage() is not defined
+      
+inside the function however, the name can be used for recursive calls:
+
+JavaScript 
+
+Let factorial = function fact(n) {
+    if (n <= 1) return 1;
+    return n * fact(n-1);
+};
+ console.log(factorial(5));
+
+output:120
+
+------------ Arrow function -----------
+
+->Arrow functions offer a more concise syntax for writing function expressions.
+
+Regular function Expression:
+
+JavaScript 
+
+Let calculatorSum = function(x,y) {
+    return x + y;
+};
+
+ console.log(calculatorSum(12,4));
+
+output:16 
+
+Arrow Function
+
+JavaScript 
+
+Let calculateSum = (x,y)=> {
+    return x + y;
+};
+ 
+  console.log(calculateSum(12,4));
+ 
+output:
+16
+
+Note:In the arrow function, we replace the function keyword with the arrow syntax =>. 
+
+*Simplifying Arrow Functions 
+
+->Arrow functions can be further simplified when they have a single expression to return.
+->In such cases, the return keyword and the curly braces{} can be omitted.
+
+JavaScript 
+
+Let calculateSum = (x,y)=> x + y;
+console.log(calculateSum(12,18));
+
+output:
+30
+Note: In this simplified form, the expression x+y is implicitly returned
+
+*Handling Single Parameters 
+->When an arrow function has only one parameter, the parentheses around the parameter can be omitted.
+
+single parameter Example:
+
+JavaScript 
+
+Let square = x => x*x 
+console.log(square(5));
+
+ouput:25 
+
+Note:If there are no parameters, empty parentheses are used:
+
+JavaScript
+
+Let greet = 0 => console.log("Hello from GFG");
+ greet(): // output:Hello from GFG!
+
+*Arrow Functions and Lexical this:- 
+ ->One of the most significant differences between arrow functions and regular functions is how they handle the this keyword.
+ ->Arrow functions do not have their own this context; they inherit this from the surrounding non-arrow function or the global context.
+
+ Example of Lexical this
+
+ JavaScript
+
+   function Person() {
+    this age = 0;
+     setInterval(() => {
+      this.age++; // 'this' refers to the Person object
+        console.log(this.age); 
+     }, 1000);
+   }
+
+    let p = new Person();
+
+Advanced Arrow function Examples:
+  conditional Logic in Arrow functions
+  
+Note:When you need to perform conditional logic inside an arrow function,you can use curly braces {} to define the function body and include the return statement.
+
+JavaScript 
+
+Let calculateSumOrDifference =(x,y) => {
+  if (x>y) {
+    return x + y;
+  } else {
+      return x - y;
+  }
+}
+console.log(calculateSumOrDifference(31,12)); output:43 
+console.log(calculateSumOrDifference(11,12)); output:-1
+
+*Using Ternary Operators 
+->For simple condiional logic, ternary operators can be used to keep the arrow function concise
+
+JavaScript 
+
+ Let calculateSumOrDifference = (x,y) => x > y ? x + y : x - y;
+
+ console.log(calculateSumOrDifference(31, 12)); output:43 
+ console.log(calculateSumOrDifference(11, 12)); output:-1 
+
+ ->Arrow functions are best suited for non-method functions and callbacks where the this context is not required or should be inherited from the surrounding scope'
+ Examples 
+  1.Event Handlers (when not using this):
+
+  JavaScript 
+
+  document.getElementByld("mButton").addEventListener("click",() => {
+      console.log("Button clicked!");
+  });
+
+  2.Array Methods:
+
+  JavaScript
+
+   Let numbers = (1,2,3,4,5);
+   Let squares = numbers.map(x=> x*x);
+   console.log(squares):
+
+   ouput:(1,4,9,16,25)
+
+--------- Understanding Arrow function, return and undefined in JS --------
+
+->A javascript function can take the parameters from the arguments through the call, in the same way, a javascript function is allowed to return the computed data to the calling function.  
+  
+syntax:
+ Function name() {
+  //body
+  Return "some data":
+ }
+
+ ->The data which we are returning from the function will be catched to the calling function in the given following way:
+      const data = name();
+ ->The data variable will be storing the data which we are passing through the return ststement of the function.
+
+ Example:
+
+ JavaScript 
+   
+   function sample() {
+      return 3+2;
+   }
+
+      var data = sample();
+      console.log(data);
+
+output:
+5
+
+->undefined is the non-value in which the defined variable is not defined that which type of variable it is and it is not included with any type of the value.
+
+Arrow Function:
+
+->Arrow functions are newly introduced in ES6 which can be used just as the replacement of the normal functions.
+
+syntax:
+
+const sample = () => {
+  //body };
+ ->This is a type of function in which the function named is sample and the parameters can be passed in the parentheses after the equal sign.
+ ->This function can be called as the same as we were calling the prevoius functions.
+
+ // sample();
+
+ ->In this function if we just define a one line or inline function thn there is no need of calling the return statement, but it can automatically pass the values back to the calling function.
+
+ Example code:
+
+  Javascript
+
+   const sample = (x,y)=> x+y;
+   const output = sample(12,13);
+   console.log(output);
+
+   output:
+   25
+
+->As you can see the arrow function sample is just passed a parameters and it's still returned the correct value without using the return statement,so this is one of the benefit of using arrow functions.   
+}
+
+
+
+
+
+
+
+
+
+
+
