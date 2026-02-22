@@ -1,0 +1,483 @@
+--------------- Basic properties of Arrays and Iterating over Array ----------------
+
+->In JavaScript, primitive data types include strings, numbers, booleans, undefined, and null.
+->However, non-primitive data types, such as arrays, provide a way to store and manage collections of data efficiently.
+->This guide will explain the use of arrays, their advantages, and practical applications.
+
+* why use Non-Primitive Data Types?
+->consider a scenario where you nedd to store the names of 60 students.using individual variables for each name would be ineffiecient and cumbersome.
+            
+     Let student1 = "Prakash";
+     Let student2 = "Rohit";
+     Let student3 = "Via";
+     Let student4 = "Adarsh";
+     //..... and so on up to 60 students
+
+Instead arrays allow us to store multiple items in a single variable, making the code more manageable and reducing memory usage.
+
+---------- Creating and Using arrays in javaScript ---------
+
+* Creating an Array:
+->You can create an array using square brackets [] and separate items with commas:
+
+    Let studentNames = ["Prakash", "Rohit", "Via", "Adarsh"];
+    console.log(studentNames);
+    output: ["Prakash", "Rohit", "Via", "Adarsh"]
+
+* Adding different types of Data:
+->Arrays can store multiple data types, including numbers, strings, other arrays, and objects:
+
+Javascript 
+
+Let mixedArray = ["Prakash", 42, [1, 2, 3],{ schoolName:"SIES"}];
+console.log(mixedArray);
+output:["Prakash", 42, [1, 2, 3],{ schoolName:"SIES"}]
+
+* Accessing Array Elements 
+
+Array elements are accessed using their index, which starts at 0:
+
+JavaScript
+
+  console.log(studentNames[0]); // output:"Prakash"
+  console.log(studentNames[1]); // ouput: "Rohit"
+
+* Iterating Over Arrays 
+
+Using a for Loop:
+->You can iterate over an array using a for loop:
+
+   JavaScript
+
+ for (Let name of studentNames) {
+    console.log(name):
+ }   
+   // output: "Prakash", "Rohit", "Via", "Adarsh"
+
+* Using a For-in Loop:
+->The for-in loop iterates over the indices of the array:
+
+   JavaScript
+
+  for (let index in studentNames) {
+    console.log(studentNames[index]);
+  }  
+  // output: "Prakash", "Rohit", "Via", "Adarsh"
+
+------------- Modifying Arrays -----------------
+
+* Adding Elements:
+You can add elements to an array using the push method:
+
+JavaScript
+
+  studentNames.push("Piyush");
+  console.log(studentNames);
+  // output: ["Prakash", "Rohit", "Via", "Adarsh", "Piyush"]
+
+* Removing Elements:
+ To remove elements, you can use methods Like pop, shift, and splice:
+ 
+JavaScript
+
+  studentNames.pop(); // removes the last element
+  console.log(studentNames);
+  output: ["Prakash", "Rohit", "Via", "Adarsh"]
+
+  studentNames.shift(); // removes the first element
+  console.log(studentNames);
+  output: ["Rohit", "Via", "Adarsh"]
+
+  studentNames.splice(1, 1); // removes one element at index 1
+  console.log(studentNames);
+  output: ["Rohit","Adarsh"];
+
+* Array Methods:
+  ->JavaScript provides various array methods to manipulate data:
+
+  1.map:-
+   Creates a new array with the results of calling a function for every array element:
+
+  JavaScript
+   
+   Let upperCaseNames = studentNames.map(name=>name.toUppercase());
+   console.log(upperCaseNames);
+
+  output:["ROHIT","ADARSH"] 
+  
+  2.filter:-
+  creates a new array with elements that pass a test provided by a function:
+
+  JavaScript
+
+   Let longNames = studentNames.filter(name.length > 5);
+   console.log(longNames);
+
+  output:["Rohit","Adarsh"] 
+  
+ 3.using Reduce:- 
+  It is used to reduce the array into one single value using some functional logic
+  
+  JavaScript
+
+   array[1,2,3,4,5,6];
+
+   const helperSum = (acc,curr)=>acc+curr 
+   sum = array.reduce(helperSum,0);
+   console.log(array)
+   console.log(sum);
+   
+   output:
+   [1,2,3,4,5,6]
+   21
+
+4.Using Some:- 
+  It is used to check whether some array values passes a test
+
+  JavaScript 
+   
+   array = [1,2,3,4,5,6];
+
+   const lessthanFourCheck = (element) =>element < 4;
+   const lessthanFour = array.some(lessthanFourCheck)
+    console.log(array);
+    if(lessthanFour){
+      console.log("Atleast one element is less than 4")
+    } else {
+      console.log("All elements are greater than 4")
+    }
+
+output:
+[1,2,3,4,5,6]
+ At least one element is less than 4
+ 
+ ------------ Copy By Reference -------- 
+
+ ->In JavaScript, working with arrays and objects often involves copying or cloning them.
+ ->However, there's a common pitfall related to shallow copying,where changes to one array can unexpectedly affect another.
+ ->Let's delve into this concept and see how to properly handle array copying to avold such issues.
+
+*The Problem with Shallow copying
+Example:
+
+ JavaScript
+
+  let arr1 = [1,2,3];
+  let arr2 = arr1;
+   console.log('ARR1:',arr1); // output: [1,2,3]
+   console.log('ARR2:',arr2); // output: [1,2,3] 
+
+    // modify arr2
+    arr2.push[4];
+
+    console.log("Updated ARR2:",arr2); // output:[1,2,3,4]
+    console.log("updated ARR1:",arr1); // output:[1,2,3,4] 
+
+output:
+   ARR1: [1,2,3]
+   ARR2: [1,2,3]
+   Updated ARR2:[1,2,3,4] 
+   Updated ARR1:[1,2,3,4]
+
+1.using the Spread operator:-  
+
+->The spread operator (....) is a convenient way to create a shallow copy of an array that points to a different memory location.
+ syntax:
+  var variablename1= [...value];
+
+  JavaScript
+   
+  // spread operator for copying 
+  let arr = ['a','b','c'];
+  lrt arr = [...arr];
+
+   console.log(arr): // ['a','b','c'];
+
+   arr2 push('d'); // inserting an element at the end of arr2 
+
+   console.log(arr2); // ['a','b','c','d']
+   console.log(arr); // ['a','b','c']
+
+   output:
+    ['a','b','c']
+    ['a','b','c','d']
+    ['a','b','c'] 
+
+ 2.Using a for loop:- 
+
+ ->Another way to create a copy is by manually iterating over the array and pushing elements to the new array.
+
+  JavaScript 
+
+   let arr4 = [1,2,3];
+   let arr5 = [];
+
+   for (let number of arr4) {
+      arr5.push(number);
+   }
+    console.log('ARR4:',arr4); // output:[1,2,3] 
+    console.log('ARR5',arr5); // output:[1,2,3]
+
+  // modify arr5
+  arr5.push(4);
+   console.log('Updated ARR5:',arr5); // output:[1,2,3,4] 
+   console.log('Updated ARR4:',arr4); // output:[1,2,3] 
+   
+ output 
+ 
+   ARR$: [1,2,3] 
+   ARR%: [1,2,3] 
+   Updated ARR5:[1,2,3,4] 
+   Updated ARR4:[1,2,3]
+
+ 3.Using Array from:- 
+
+->The Array from method can also be used to create a shallow copy of an array.
+
+ JavaScript 
+  
+  let arr6 = [1,2,3] 
+  let arr7 = Array from (arr6); // properly copying the array using Array from 
+  
+  console.log('ARR6:',arr6); // output:[1,2,3]
+  console.log('ARR7:',arr7); // output:[1,2,3] 
+
+  // modify arr7 
+  arr7.push(4);
+   console.log("Updated ARR7:",arr7); // output:[1,2,3,4] 
+   console.log("Updated ARR6:",arr6); // output:[1,2,3] 
+
+ 4.Using concat:- 
+
+ ->The concat method can be used to create a new array that includes the elements of the original array.
+
+  JavaScript 
+
+   let arr8 = [1,2,3];
+   let arr9 = arr8.concast(); // Properly copying the array using concat 
+
+   console.log('ARR8:',arr8); // output:[1,2,3]
+   console.log('ARR9:',arr9); // output:[1,2,3] 
+    // modify arr9 
+     arr9.push(4);
+
+     console.log("Updated ARR9:,arr9); // output:[1,2,3,4]
+     console.log('Updated ARR8:,arr8); // output:[1,2,3] 
+
+ output:
+   ARR8:[1,2,3]
+   ARR9:[1,2,3] 
+  Updted ARR9:[1,2,3,4] 
+  Updated ARR8:[1,2,3] 
+  
+---------- Array push, pop, and slice methods --------- 
+
+1.Array.push() method:- 
+ ->The arr.push() method is used to push one or more values into the array.
+ ->This method changes the length of the array by the number of elements added to the array.
+ syntax:
+  arr.push(element1,element2,...,elementN);
+
+Parameters:
+ This method contains as many numbers of parameters as the number of elements to be inserted into the array.
+Return Value: 
+ This method returns the new length of the array after inserting the arguments into the array.
+
+   Example1:
+
+    JavaScript 
+
+     function func() {
+       var arr = ['GFG','gfg','g4g']; 
+       arr.push['GeeksforGeeks'];
+       console.log(arr);
+
+     }
+      func();
+
+output:
+['GFG','gfg','g4g','GeeksforGeeks']
+
+Example2:
+
+  JavaScript
+    
+    function func() {
+      var arr = [34,234,567,4];
+     console.log(arr.push(23,45,67));
+     console.log(arr);
+    }
+      func();
+
+output:
+7
+[34,234,567,4,23,45,67] 
+
+2.Array.pop() method:- 
+ ->The arr.pop() method is used to remove the last element of the array and also returns the removed element
+ ->This function decreases the length of the array.
+  syntax:
+    arr.pop();
+
+Parameters:
+ This method does not accept any parameter.
+Return value:
+ This method returns the removed element array, if the array is empty, then this function returns undefined.
+
+Example1:
+
+ JavaScript
+
+  function func() {
+    var arr = ['GFG','gfg','g4g','Geeksforgeeks'];
+    console.log(arr.pop());
+  }
+    func();
+
+output:
+Geeksforgeeks
+
+Example2:
+
+  JavaScript
+
+   function func() {
+      var arr = [34,234,567,4,23,45,67];
+      var popped = arr.pop();
+      console.log(popped);
+      console.log(arr);
+   }
+      func();
+      
+output:
+67
+[34, 234, 567, 4, 23, 45]
+
+3.Array.slice() method:-
+  ->The arr.slice() method returns a new array containing a portion of the array on which it is implemented, the original remains unchanged.
+  syntax:
+    arr.slice(begin, end);
+parameters:
+ This method accepts two parameters as mentioned above and dicussed below: 
+ * begin:
+     ->This parameter defines the starting index from where the portion is to be extracted.
+     ->If this argument is missing then the method takes begin as 0 as it is the default start value.
+ * end:
+     ->This parameter is the index up to which the portion is to be extracted 
+     ->If this argument is not defined then the array till the end is extracted as it is the default end value.
+     ->If the end value is greater than the length of the array, then the end value changes to the length of the array.
+Return value:
+  This method returns a new array containing some portion of the original array.
+  
+  Example1:
+
+     JavaScript
+
+     function func {
+      var arr = [23, 56, 87, 32, 75, 13];
+      var new_arr = arr.slice(2,4);
+      console.log(arr);
+      console.log("<br>");
+      console.log(new_arr);
+     }
+      func();
+
+  output:
+    [23, 56, 87, 32, 75, 13]
+    <br>
+    [87, 32] 
+    
+  Example2:
+  
+    function func {
+      var arr = [32,55,43,81,28,68];
+      var new_arr = arr.slice[2];
+      console.log(arr);
+      console.log("<br>");
+      console.log(new_arr);
+    }
+     func();
+
+  output:
+    [32, 55, 43, 81, 28, 68]
+    <br>
+    [43, 81, 28, 68] 
+    
+--------------  Array includes and sort methods ---------- 
+
+1.Array includes() method:- 
+
+ ->The array.includes() method is used to know either a particular element is present in the array or not and accordingly, it returns true or false.
+ ->If the element is present, then it returns true otherwise false.
+
+  syntax:
+   array.includes(searchElement, start)
+Parameter:
+ ->This method accepts two parameters as mentioned above and discussed below:
+   * searchElement:
+    This parameter holds the element which will be searched.
+   * start:
+    This parameter is optional and it holds the starting point of the array, where to begin the search default value is 0.
+
+Return value:
+ ->It returns a Boolean value i.e, either True or False.
+ 
+Example1:
+  
+  JavaScript 
+
+   Input : [1,2,3,4,5].includes(2); // output: true
+
+Example2:
+
+  JavaScript 
+
+   Input : [1,2,3,4,5].includes(9); // output: false
+
+2.Array.sort() method:- 
+
+ ->The arr.sort() method is used to sort the array in place in a given order according to the compare() function.
+ ->If the method is omitted then the array is sorted in ascending order
+
+  syntax:
+    arr.sort(comparefunction)
+
+Parameters:
+ ->This method accepts a single parameter as mentioned above and described below:
+ 
+compareFunction:
+ ->This parameter is used to sort the elements according to different attributes and in a different order.
+      *compareFunction(a,b) < 0
+      *compareFunction(a,b) > 0
+      *comparefunction(a,b) = 0
+Return value:
+ This method returns the reference of the sorted original array.
+ 
+Example1:
+
+  JavaScript 
+    function func() {
+      var arr = ["Geeks", "for","Geeks"]
+      console.log(arr);
+      console.log(arr.sort());
+    }
+     func();
+     
+ output:
+
+      ['Geeks', 'for', 'Geeks']
+      ['Geeks', 'Geeks', 'for']
+      
+Note:
+ Time complexity:The Time Complexity of the sort() method varies & depends on implementation.
+      
+    }
+
+
+
+   }
+  }
+ 
+
+
+
