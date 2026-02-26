@@ -1,0 +1,704 @@
+-------------- Split and Join ------------ 
+
+->The split and join methods in JavaScript are powerful tools for manipulating strings and arrays.
+->The split method is used to divide a string into an array of substrings, while the join method combines an array of elements into a single string.
+->These methods often work together to achieve various tasks, such as checking if a string is a palindrome.
+
+1. Split Method :- 
+ The split method splits a string into an array of substrings baesd on a specified separator.
+ syntax:
+   str.split(separator, limit)
+
+  1.separator:
+ ->It is used to specify the character, or the regular expression, to use for splitting the string.
+ ->If the separator is unspecified then the entire string becomes one single array element.
+ ->The same also happens when the separator is not present in the string.
+ ->If the separator is an empty string ("") then every character of the string is separated.
+ 
+  2.limit:
+ ->Defines the upper limit on the number of splits to be found in the given string.
+ ->If the string remains unchecked after the limit is reached then it is not reported in the array.
+
+ Return value:
+ ->This function returns an array of strings that is formed after splitting the given string at each point where the separator occurs.
+ 
+Example1:
+
+ JavaScript 
+
+   function func() {
+    var str = 'GeeksforGeeks'
+    var array = str.split("for");
+    console.log(array);
+   }
+    func();
+
+output:
+['Geeks','Geeks'] 
+
+Example2:
+
+ JavaScript
+
+   function func() {
+    var str = 'It iS a Sr&e@@t Day.'
+    var array = str.split("");
+    console.log(array);
+   }
+    func();
+
+output:
+['It, iS, a, Sr&e@@t, Day.']
+
+Example3:
+
+ JavaScript 
+
+    function func() {
+     var str = 'It iS a Sr&e@@t Day.'
+     var array = str.split("".2);
+     console.log(array);
+    }
+     func();
+
+output:
+['It, iS'] 
+
+2.Array.join() method :-
+ ->The arr.join() method is used to join the elements of an array into a string.
+ ->The elements of the string will be separated by a specified separator and it's default value is a comma(,).
+  syntax:
+   array.join(separator)
+
+Parameters:
+->This method accepts single parameter as mentioned above and discussed below:
+* separator:
+ ->It is Optional i.e, it can be either used as parameter or not.
+ ->It's default value is comma (,).
+
+ Return value:
+ ->It returns the string which contain the collection of array's elements.
+ Example:
+
+   var a = [1, 2, 3, 4, 5, 6];
+   print(a.join('|'));
+
+  output: 1|2|3|4|5|6
+
+Program1:
+
+ JavaScript
+   function func() {
+    var a = [1, 2, 3, 4, 5, 6];
+    console.log(a, join());
+   }
+    func();
+
+output: 1,2,3,4,5,6
+
+Program2:
+
+ JavaScript
+   function func() {
+    var a = [1, 2, 3, 4, 5, 6];
+    console.log(a, join(""));
+   }
+    func();
+
+output: 123456
+
+3.Use Cases for Split and Join :
+
+* Reversing a String : As demonstrated above, split a string into characters, reverse the array, and join it back into a string.
+* Transforming Data  : For example, converting CSV string into an array and back.
+* String Manipulation: Esaily modify parts of a string by splitting it into an array, altering the array, and joining it back into a string. 
+
+------------ Spread operator ---------- 
+
+->The spread operator in JavaScript is a powerful feature that allows you to unpack elements from arrays or properties from objects.
+->It is represented by three dots (...) and can be used in various contexts to achieve different outcomes.
+
+* Spreading an Array:- 
+->The spread operator can be used to spread the elements of an array into another array or to perform operations that require unpacking of array elements
+ syntax:
+ var variablename1 = [...value];
+
+->In the above syntax, ... is spread operator which will target all values in particular variable.
+->when ... occurs in function call or alike, li is called a spread operator.
+->Spread operator can be used in many cases, Like when we want to expand, copy, concat, with math object 
+
+Example:
+
+JavaScript 
+    
+ const arr = [1, 2, 3, 4, 5];
+ console.log(...arr);
+
+ output:
+ 1 2 3 4 5
+
+* Using Spread Operator to merge Arrays 
+  one of the common use cases of the spread operator is to merge multiple arrays.
+
+  JavaScript 
+
+   const arr1 = [1, 2, 3, 4, 5];
+   const arr2 = [6, 7, 8, 9];
+   const mergedArr = [...arr1,...arr2];
+   console.log(mergedArr);
+
+output:
+
+[
+  1, 2, 3, 4, 5,
+  6, 7, 8, 9
+] 
+
+* Adding Elements while merging 
+  You can also add elements in between or around the arrays while merging 
+ 
+  JavaScript 
+
+    const arr1 = [1, 2, 3, 4, 5];
+    const arr2 = [8, 9];
+    const combinedArr = [...arr1, 6, 7, ...arr2, 10, 11];
+    console.log(combinedArr);
+
+output:
+
+[
+  1, 2, 3, 4, 5,
+  6, 7, 8, 9, 10,
+  11
+]
+
+* Preventing Mutation 
+->one of the key advantages of using the spread operator is that it prevents mutation of the original arrays.
+->This is important especially in functional programming and when dealing with state in applications like React.
+ 
+ JavaScript 
+
+  const arr1 = [1, 2, 3, 4, 5];
+  const arr3 = [...arr1, 6, 7];
+  console.log(arr1);
+  console.log(arr3);
+
+output:
+
+[1, 2, 3, 4, 5] 
+[
+  1, 2, 3, 4,
+  5, 6, 7
+] 
+
+* Spreading Operator in Objects 
+The spread operator can also be used with objects to copy or merge them.
+
+Copying an Object 
+
+ JavaScript 
+
+  const obj1 = [a:1, b:2];
+  const obj2 = [...obj1];
+  console.log(obj2);
+
+output:
+
+[a:1, b:2] 
+
+* Merging Objects 
+
+  JavaScript 
+   
+   const obj1 = (a:1, b:2);
+   const obj2 = (c:3, d:4);
+   const mergedObj = (...obj1, ...obj2);
+   console.log(mergedObj);
+
+output:
+
+ ['a', 'b', 'c']
+ ['a', 'b', 'c', 'd']
+ ['a', 'b', 'c'] 
+
+ * Updating Properties 
+
+  JavaScript 
+
+    const obj1 = (a:1, b:'2');
+    const updatedObj = (...obj1, b:3);
+    console.log(updatedObj);
+
+output:
+
+ {{(a:1, b:3) 
+
+->Even though we get the content on one array inside the other one, but actually it is array inside another array.
+
+JavaScript 
+
+  Let arr = ['a','b'];
+  Let arr2 = [...arr, 'c','d'];
+  console.log(arr2);
+
+  output:
+
+  ['a', 'b', 'c', 'd'] 
+
+------------ Math ------------ 
+
+->The math object in JavaScript has different properties that we can make use of to do.
+
+  JavaScript 
+
+  console.log(Math.min(1,2,3,-1));
+
+output: -1
+
+->Now consider that we have an array instead of a list, this above Math object method would nt work and will return NaN.
+
+ JavaScript
+
+  Let arr = [1,2,3,-1];
+  console.log(Math.min(array));
+
+output: NaN
+
+->Whwn ...arr is used in the function call, it "expands" an iterable object arr into the List of arguments.
+->In order to avoid this NaN output, we make use of spread operator.
+
+ JavaScript 
+
+  Let arr = [1,2,3,-1];
+  console.log(Math.min(...arr));
+
+output: -1
+
+* Examples of spread operator with objects:
+
+->ES6 has added spread property to object literals in JavaScript.
+->The spread operator(...) with objects is used to create copies of existing objects with new or updated values.
+
+ JavaScript 
+  
+  const user1 = {
+      name:'Jen'
+      age :22
+  };
+   const clonedUser = {...user1};
+   console.log(clonedUser);
+
+output:
+
+ {name:'Jen', age:22}
+
+ JavaScript 
+
+  const user1 = {
+    name:'Jen',
+    age :22;
+  };
+
+  const user2 = {
+    name:"Andrew". 
+    Location:"Philadelphia"
+  };
+
+  const mergedUsers = {...user1,...user2};
+  console.log(mergedUsers)
+
+output:
+
+{name:'Andrew', age:22, location:Philadelphia}
+
+------------ Destructuring Array ----------- 
+
+->The Destructuring assignment is the important technique introduced in ECMAScript 2015 (ES6) version of JavaScript that provides a shorthand syntax.
+->It makes the code shorter and more readable.
+
+Example:
+
+ JavaScript 
+
+   var names = ["alpha", "beta", "gamma", "delta"];
+   var firstName  = names[0];
+   var secondName = names[1];
+
+    console.log(firstName);
+    console.log(secondName); 
+
+output:
+  alpha
+  beta
+
+syntax:
+
+    . Array destructuring:
+
+  var x, y;
+  [x, y] = [10, 20];
+   console.log(x);
+   console.log(y);
+   
+   . or 
+
+  [x, y, ---restof] = [10, 20, 30, 40, 50];
+   console.log(x);
+   console.log(y);
+   console.log(resstof);
+   
+    . Object destructuring:
+
+   ({x, y} = {x:10, y:20});
+    console.log(x);
+    console.log(y);
+    
+   ({x, y, ...restof} = (x:10, y:20, m:30, n:40))
+   console.log(x);
+   console.log(y);
+   console.log(restof);
+
+Example1:
+
+    JavaScript 
+
+      var names = ["alpha", "beta", "gamma", "delta"];
+      var [firstName, secondname] = names;
+
+      console.log(firstName);
+      console.log(secondName);
+
+      var [firstName, secondName] = ["alpha", "beta", "gamma", "delta"];
+ 
+      console.log(firstName);
+      console.log(secondName);
+
+  output:
+  
+   alpha
+   beta
+   alpha
+   beta
+
+Example2:
+
+    JavaScript 
+
+     var [firstName,,thirdname] = ["alpha", "beta", "gamma", "delta"];
+     console.log(firstName);
+     console.log(thirdname);
+
+  output:
+
+  alpha
+  beta 
+  
+Example3:
+
+    JavaScript 
+
+     var[firstName,,...lastname] = ["alpha", "beta", "gamma", "delta"];
+     console.log(firstname);
+     console.log(secondname);
+
+  output:
+  
+  alpha
+  ['gamma', 'delta'] 
+
+Example4:
+
+    JavaScript
+
+     var names = ["alpha", "beta", "gamma", "delta"];
+     var [firstName, secondName] = names;
+     console.log(firstName);
+     console.log(secondName);
+     // After swapping
+    [firstname, secondname] = [seconsName, firstName]
+    console.log(firstName);
+    console.log(secondName);
+
+  output:
+  
+  alpha
+  beta
+  beta
+  alpha
+
+ Note:one advantage of using a destructuring assignment is that there is no need to manipulate an entire object in a function but just the fields that are required can be copied inside the function  
+
+example5:
+
+   JavaScript 
+
+     function NamesList() {
+        return ["alpha", "beta", "gamma", "delta"]
+     }
+    var[firstName, secondName] = NamesList();
+    
+    console.log(firstName);
+    console.log(secondName);
+
+  output:
+  
+   alpha
+   beta
+
+-------------- Destructuring Objects --------
+
+->Destructuring objects is particularly useful when you need to extract specific properties from an object.
+
+* Basic Object Destruturing
+
+Example6:
+
+    JavaScript
+
+      const user = {
+        name:'John Doe',
+        age:30,
+        job:'Developer'
+      };
+      const ( name, age, job ) = user
+      console.log(name);
+      console.log(age);
+      console.log(job);
+
+    output:
+    
+     John Doe
+     30
+     Developer
+
+* Renaming Variables 
+
+Example7:
+
+    JavaScript
+
+      const user = {
+        name:'John Doe'
+        age:30,
+        job:'Developer'
+      };
+      const ( name: userName, age: userAge, job: userJob) = user;
+      console.log(userName);
+      console.log(userAge);
+      console.log(userJob);
+
+    output:
+    
+       John Doe
+       30
+       Developer
+
+* Nested Destructuring 
+
+Example8:
+
+    JavaScript
+     
+      const user = {
+        name:'John Doe',
+        address: {
+          city:'New York',
+          country:'USA'
+        }
+      };
+      const ( name, address: (city, country)) = user;
+      console.log(name);
+      console.log(city);
+      console.log(country);
+
+    output:
+
+       John Doe
+       New york 
+       USA
+
+* Destructuring Function Parameters 
+
+->Destructuring can be used in function parameters to directly extract values from objects passed to the function.
+
+Example10:
+
+    JavaScript
+
+      function displayUser({name, age})
+      {
+        console.log('Name: $(name), Age: $(age)');
+      }
+
+      const user = {
+        name:'John Doe',
+        age:30
+      };
+
+      displayUser(user);
+
+    output:
+    
+    Name:John Doe
+    Age :30 
+
+--------- Iterating over Array and Copy By Reference ---------- 
+
+->In JavaScript, the array is a simple variable that is used to store different elements.
+->It is often used when we want to store a list of elements and access them by a single variable.
+->Unlike most languages where the array is a reference to the multiple variables.
+->In JavaScript array is a single variable that stores multiple elements.
+
+* Declaring arrays -
+
+1st method-> 
+
+Let s1 = "Prakash";
+Let s2 = "Akash";
+Let s3 = "Riya";
+Let s4 = "Adarsh";
+
+2nd method->
+// Initializing while declaring 
+
+var Arr1 = ["1", "2", "3", "Prakash",];
+
+* Loops -
+
+->Looping in Programming languages is a feature which facilitates the execution of of a set of instuctions/functions repeatedly while some condition evaluates to true.
+->For loop provides a concise way of writing the loop structure.
+->unlike a while loop, a for statement consumes the initialization,condition, and increment/decrement in one line.
+syntax:
+     for (initialization condition; testing condition; increment/decrement)
+
+Example:
+
+Let studentsName = ["rahul", "riya", "sumit". "aryan"];
+Let arrLength = studentsName.length 
+for(Let i = 0 ; i<arrLength : i++) {
+  console.log(studentsName(i))
+}
+
+Output:
+
+rahul
+riya
+sumit
+aryan
+
+*For Let of:
+
+->The JavaScript for of statement loops through the values of an iterable object.
+->It let's you Loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+
+Example:
+
+for(Let name of studentsName){{
+  console.log(name) }
+
+output:
+
+rahul
+riya
+sumit
+aryan
+
+* The For in loop:
+ The JavaScript for in statement loops through the properties of an object:
+
+ for (key in object) {
+  // code block to be executed
+ }
+
+Example:
+
+ for(let name in studentsName) {
+  console.log(name) 
+ }
+
+output:
+0
+1
+2
+3
+
+------------ Copy by Reference ---------- 
+
+ * Shallow Copy:
+
+  ->when a reference variable is copied into a new reference variable using the assignment operator, a shallow copy of the referenced object is created.
+
+Example:
+
+Let arr[1] = [1,2,3] 
+Let arr1 = arr2;
+console.log("arr1", arr)
+console.log("arr2", arr)
+arr2.push(4)
+console.log("updated arr1", arr);
+console.log("updated arr2", arr);
+
+output:
+
+Arr1 = [1,2,3] 
+Arr2 = [1,2,3] 
+Updated arr1 = [1,2,3,4] 
+Updated arr2 = [1,2,3,4] 
+
+->Spread syntax (...) allows an iterable, such as an array or string, to be expaned in places where zero or more arguments (for function calls) or elements.
+->In an object Literal, the spread syntax enumerates the poperties of an object an adds the key value pairs to the object being created.
+
+Example:
+
+Let arr[1] = [1,2,3]
+Let arr1 = Let arr2 
+console.log("arr1", arr1)
+console.log("arr2", arr2)
+arr2.push(4)
+console.log("updated arr1", arr1);
+console.log("updated arr2", arr2);
+// spread operator 
+
+Let arr3 = [....arr1]
+console.log("arr3", arr3)
+arr.push(5) 
+console.log("arr1", arr1)
+console.log("arr2", arr2)
+
+output:
+
+Arr1 = [1,2,3,4] 
+Arr2 = [1,2,3,4] 
+Updated arr1 = [1,2,3,4] 
+Updated arr2 = [1,2,3,4]
+arr3 = [1,2,3,4] 
+Updated arr1 = [1,2,3,4] 
+Updated arr3 = [1,2,3,4,5]   
+
+  
+  {
+  
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+    
+
+  
+
